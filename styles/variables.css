@@ -1,0 +1,65 @@
+:root {
+  --font-family-primary: 'NotoSans';
+  --font-family-secondary: 'Lato';
+
+  /* HEADINGS */
+  --font-h1: 700 80rem / 120% var(--font-family-primary);
+  --font-h2: 700 72rem / 120% var(--font-family-primary);
+  --font-h3: 700 56rem / 130% var(--font-family-primary);
+  --font-h4: 700 48rem / 140% var(--font-family-primary);
+  --font-h5: 700 40rem / 140% var(--font-family-primary);
+  --font-h6: 400 28rem / 160% var(--font-family-primary);
+
+  /* BODY */
+  --font-2xl-130: 700 24rem / 130% var(--font-family-primary);
+  --font-2xl: 600 24rem / 100% var(--font-family-primary);
+  
+  --font-xl: 600 20rem / 100% var(--font-family-primary);
+
+  --font-l: 700 18rem / 130% var(--font-family-primary);
+  --font-l-sb: 600 18rem / 100% var(--font-family-primary);
+  --font-l-lato: 400 18rem / 160% var(--font-family-secondary);
+
+  --font-m: 400 16rem / 100% var(--font-family-primary);
+  --font-m-medium: 500 16rem / 100% var(--font-family-primary);
+  --font-m-lato: 400 16rem / 160% var(--font-family-secondary);
+  
+
+  --font-s: 400 14rem / 100% var(--font-family-secondary);
+  --font-s-140: 400 14rem / 140% var(--font-family-secondary);
+  --font-s-160: 400 14rem / 160% var(--font-family-secondary);
+
+  --font-xs: 400 12rem / 100% var(--font-family-primary);
+  --font-2xs: 400 8rem / 100% var(--font-family-primary);
+
+
+  /* OTHER */
+  --font-button-s: 600 14rem / 100% var(--font-family-primary);
+  --font-button-m: 500 14rem / 100% var(--font-family-primary);
+
+
+  /* COLORS */
+  --black: #191919;
+  --gray-800: #716785;
+  --gray-600: #9688B1;
+  --gray-400: #B5AEC1;
+  --white: #fff;
+
+  --color-text: #9688b1;
+
+  --blue: #3254B5;
+  --violet: #7878ff;
+  --light-violet: #94A0FB;
+  --red: #FF0181;
+  --yellow: #FDA900;
+  --deep-blue: #0E042D;
+
+  --success: #21D184;
+  --error: #FF5C5C;
+  --link: #3870FF;
+
+  /* GRADIENTS */
+  --gradient-1: linear-gradient(180deg, #A737FF 0%, #3A89FF 100%);
+  --gradient-2: linear-gradient(47deg, #3254B5 0%, #94A0FB 31.22%, #8E9CF7 39.92%, #7E8FEC 51.12%, #647BD9 63.68%, #3F5EBE 77.15%, #3254B5 81.44%, #3254B5 100%);
+  --gradient-3: linear-gradient(90deg, rgba(120, 120, 255, 0.95) 0%, rgba(253, 168, 0, 0.95) 50.19%, rgba(255, 1, 129, 0.95) 100%);
+}

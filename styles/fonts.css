@@ -1,0 +1,34 @@
+@font-face {
+  font-family: NotoSans;
+  font-weight: 400;
+  src: url('../assets/fonts/NotoSans-Regular.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Noto Sans;
+  font-weight: 500;
+  src: url('../assets/fonts/NotoSans-Medium.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: NotoSans;
+  font-weight: 600;
+  src: url('../assets/fonts/NotoSans-SemiBold.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: NotoSans;
+  font-weight: 700;
+  src: url('../assets/fonts/NotoSans-Bold.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Lato;
+  font-weight: 400;
+  src: url('../assets/fonts/Lato-Regular.ttf');
+  font-display: swap;
+}

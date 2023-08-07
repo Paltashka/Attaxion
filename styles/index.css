@@ -1,0 +1,53 @@
+@import url('./fonts.css');
+@import url('./variables.css');
+@import url('./components/buttons.css');
+@import url('./components/header.css');
+@import url('./components/footer.css');
+@import url('./components/sections.css');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: calc(100vw / 1440);
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+.bg-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font: var(--font-h1);
+}
+
+h2 {
+  font: var(--font-h2);
+}
+h3 {
+  font: var(--font-h3);
+}
+h4 {
+  font: var(--font-h4);
+}
+h5 {
+  font: var(--font-h5);
+}
+h6 {
+  font: var(--font-h6);
+}

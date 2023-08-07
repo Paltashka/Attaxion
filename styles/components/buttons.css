@@ -1,0 +1,100 @@
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:disabled:hover {
+  cursor: auto;
+}
+
+.button-cta-red, .button-cta-red-outlined, .button-cta-gradient-outlined, .button-cta-gradient  {
+  color: var(--white);
+  font: var(--font-button-s);
+  padding: 16rem 32rem;
+  border-radius: 4rem;
+  transition: .2s ease;
+}
+
+.button-cta-gradient-outlined {
+  background-image: url('../../assets/images/button-cta-gradient-outlined.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.button-cta-arrow {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+  font: var(--font-m);
+  font-style: italic;
+  color: var(--light-violet);
+}
+
+.button-cta-arrow .arrow-icon {
+  width: 24rem;
+  height: 24rem;
+  color: var(--yellow);
+}
+
+.button-cta-arrow:hover {
+  color: var(--yellow);
+}
+
+.button-cta-arrow:disabled, .button-cta-arrow:disabled .arrow-icon {
+  color: var(--color-text);
+}
+
+
+.button-cta-red {
+  background-color: var(--red);
+}
+
+/* OUTLINED */
+.button-cta-red-outlined {
+  position: relative;
+  overflow: hidden;
+  border: 1rem solid var(--red);
+  color: var(--red);
+}
+.button-cta-red-outlined::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: var(--red);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button-cta-red-outlined:hover {
+  color: var(--white); 
+  scale: 1.05;
+}
+
+
+.button-cta-red-outlined:hover::before {
+  width: 100%;
+  scale: 1.1;
+}
+
+.button-cta-red-outlined:disabled, .button-cta-red-outlined:disabled:hover{
+  background: none;
+  border: 1rem solid var(--color-text);
+  color: var(--color-text);
+}
+
+
+/* GRADIENT */
+.button-cta-gradient {
+  color: var(--white);
+  background: var(--gradient-3);
+}
