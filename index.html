@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="description"
+    content="Take control of your external attack surface with leading asset coverage and laser-focused, actionable vulnerability intelligence. Request a demo today.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preload" href="./assets/fonts/NotoSans-Regular.ttf" as="font" type="font/ttf" crossOrigin="" />
   <link rel="preload" href="./assets/fonts/NotoSans-Medium.ttf" as="font" type="font/ttf" crossOrigin="" />
@@ -11,47 +13,49 @@
   <link rel="preload" href="./assets/fonts/Lato-Regular.ttf" as="font" type="font/ttf" crossOrigin="" />
   <link href="./styles/index.css" rel="stylesheet">
   <link href="./styles/pages/home.css" rel="stylesheet">
-  <title>Attaxion</title>
+  <title>Attaxion: Attack Surface Management Platform with #1 Asset Coverage</title>
 </head>
 
 <body class="preload">
   <header>
     <div class="header-top">
-      <div>EXTERNAL ATTACK SURFACE MANAGMENT</div>
-      <div>VULNERABILITY MANAGMENT</div>
-      <div>CYBER THREAT INTELLIGENCE</div>
+      <a href="/external-attack-surface-management">EXTERNAL ATTACK SURFACE MANAGMENT</a>
+      <a href="#">VULNERABILITY MANAGMENT</a>
+      <a href="#">CYBER THREAT INTELLIGENCE</a>
     </div>
     <div class="header-bottom">
-      <img class="logo" alt="Attaxion Logo" src="assets/icons/logo.svg" alt="Attaxion logo" />
+      <a href="/"><img class="logo" alt="Attaxion Logo" src="assets/icons/logo.svg" alt="Attaxion logo" /></a>
       <nav>
         <ul>
           <li>
             <span>Products</span>
             <div>
-              <img src="assets/icons/dropdown.svg">
+              <img src="assets/icons/dropdown.svg" alt="dropdown-icon">
             </div>
           </li>
           <li>
             <span>Solutions</span>
             <div>
-              <img src="assets/icons/dropdown.svg">
+              <img src="assets/icons/dropdown.svg" alt="dropdown-icon">
             </div>
           </li>
           <li>
             <span>Resources</span>
             <div>
-              <img src="assets/icons/dropdown.svg">
+              <img src="assets/icons/dropdown.svg" alt="dropdown-icon">
             </div>
           </li>
           <li>
             <span>Company</span>
             <div>
-              <img src="assets/icons/dropdown.svg">
+              <img src="assets/icons/dropdown.svg" alt="dropdown-icon">
             </div>
           </li>
         </ul>
       </nav>
-      <button type="button" class="button-cta-red">Request Demo</button>
+
+      <button class="button-cta-red" onclick="window.location.href='/request-demo'">Request
+        Demo</button>
     </div>
   </header>
   <main>
@@ -83,8 +87,8 @@
           critical vulnerabilities.
           Orchestrate risk remediation seamlessly.</p>
         <div class="buttons">
-          <button class="button-cta-gradient">Request Demo</button>
-          <button class="button-cta-red-outlined">Apply for Early Access</button>
+          <button class="button-cta-gradient" onclick="window.location.href='/request-demo'">Request Demo</button>
+          <button class="button-cta-red-outlined" onclick="window.location.href='#'">Apply for Early Access</button>
         </div>
       </div>
       <div class="content-block">
@@ -114,7 +118,7 @@
           <h3>Discover More <br> True Assets Faster</h3>
           <p>Uncover all your known and unknown assets and their associated vulnerabilities using modern discovery
             methods and reconnaissance technologies.</p>
-          <button class="button-cta-red">Learn More</button>
+          <button class="button-cta-red" onclick="window.location.href='#'">Learn More</button>
         </div>
         <div class="image-content">
           <div id="image1"></div>
@@ -144,7 +148,7 @@
       <div class="card bg-glass">
         <h5>Beat attackers at their own game with Attaxion.</h5>
         <p>Start your 14-day free trial or request a demo.</p>
-        <button class="button-cta-gradient">Start Free Trial</button>
+        <button class="button-cta-gradient" onclick="window.location.href='#'">Start Free Trial</button>
       </div>
     </section>
     <section id="homepage-s5">
@@ -215,7 +219,7 @@
             <div class="author">Director of Information Security at a SaaS Company</div>
             <div class="controls">
               <button><img src="assets/icons/arrow.svg" alt="Arrow left" /></button>
-              <button><img src="assets/icons/arrow.svg" alt="Arrow rigth" /></button>
+              <button><img src="assets/icons/arrow.svg" alt="Arrow right" /></button>
             </div>
           </div>
         </div>
@@ -233,8 +237,8 @@
             identify weaknesses in the organization's infrastructure, applications, and web services.
           </p>
           <div class="buttons">
-            <button class="button-cta-gradient">Start Free Trial</button>
-            <button class="button-cta-arrow">
+            <button class="button-cta-gradient" onclick="window.location.href='#'">Start Free Trial</button>
+            <button class="button-cta-arrow" onclick="window.location.href='#'">
               <span>Learn more </span>
               <img src="assets/icons/button-arrow.svg" class="arrow-icon"></img>
             </button>
@@ -293,7 +297,8 @@
   <footer>
     <div class="grid-item footer-info1">
       <img src="assets/icons/logo.svg" alt="Attaxion Logo" class="logo">
-      <button class="button-cta-gradient-outlined">Request a Demo</button>
+      <button class="button-cta-gradient-outlined" onclick="window.location.href='/request-demo'">Request a
+        Demo</button>
       <div class="input-block">
         <label>Sign up to our newsletter</label>
         <input placeholder="samantha@attaxion.studio" type="text">
@@ -313,29 +318,31 @@
       <div class="footer-list">
         <span class="list-title">Platform capabilities</span>
         <ul>
-          <li class="list-item">Attack Surface Discovery</li>
-          <li class="list-item">Vulnerability Prioritization</li>
-          <li class="list-item">Automated Remediation</li>
-          <li class="list-item">Continuous Monitoring</li>
+          <li class="list-item"><a href="/capabilities/attack-surface-discovery">Attack Surface Discovery</a></li>
+          <li class="list-item"><a href="/capabilities/vulnerability-prioritization"> Vulnerability Prioritization</a>
+          </li>
+          <li class="list-item"><a href="/capabilities/automated-remediation">Automated Remediation</a></li>
+          <li class="list-item"><a href="/capabilities/continuous-monitoring">Continuous Monitoring</a></li>
         </ul>
       </div>
       <div class="footer-list">
         <span class="list-title">Solutions by use case</span>
         <ul>
-          <li class="list-item">Reduce your external attack surface</li>
-          <li class="list-item">Use case 1</li>
-          <li class="list-item">Use case 2</li>
-          <li class="list-item">Use case 3</li>
+          <li class="list-item"><a href="/use-case/reduce-attack-surface">Reduce your external attack surface</a></li>
+          <li class="list-item"><a href="/use-case/shadow-it-visibility">Enhance shadow it visibility</a></li>
+          <li class="list-item"><a href="/use-case/manage-your-threat-exposure">Manage your threat exposure</a></li>
+          <li class="list-item"><a href="/use-case/assess-mergers-and-acquisitions-risks">Assess mergers and
+              acquisitions risks</a></li>
         </ul>
       </div>
       <div class="footer-list">
         <span class="list-title">Solutions by Industry</span>
         <ul>
-          <li class="list-item">Government</li>
-          <li class="list-item">Industry 1</li>
-          <li class="list-item">Industry 2</li>
-          <li class="list-item">Industry 3</li>
-          <li class="list-item">Industry 4</li>
+          <li class="list-item"><a href="/industry/financial-services">Financial Services</a></li>
+          <li class="list-item"><a href="/industry/online-marketplaces">Online Marketplaces</a></li>
+          <li class="list-item"><a href="/industry/it-saas-vendors">IT and SaaS Vendors</a></li>
+          <li class="list-item"><a href="#">Healthcare Providers</a></li>
+          <li class="list-item"><a href="/industry/government-entities">Government Entities</a></li>
         </ul>
       </div>
     </div>
@@ -343,23 +350,23 @@
       <div class="footer-list">
         <span class="list-title">Integrations</span>
         <ul>
-          <li class="list-item">Threat Intelligence APIs</li>
+          <li class="list-item"><a href="/integrations/threat-intelligence-apis">Threat Intelligence APIs</a></li>
         </ul>
       </div>
       <div class="footer-list">
         <span class="list-title">Resources</span>
         <ul>
-          <li class="list-item">Blog</li>
-          <li class="list-item">Contact Hub</li>
-          <li class="list-item">Glossary</li>
+          <li class="list-item"><a href="/blog">Blog</a></li>
+          <li class="list-item"><a href="/learning-hub">Content Hub</a></li>
+          <li class="list-item"><a href="/glossary">Glossary</a></li>
         </ul>
       </div>
       <div class="footer-list">
         <span class="list-title">Company</span>
         <ul>
-          <li class="list-item">About</li>
-          <li class="list-item">Career</li>
-          <li class="list-item">Conact us</li>
+          <li class="list-item"><a href="#">About</a></li>
+          <li class="list-item"><a href="#">Career</a></li>
+          <li class="list-item"><a href="#">Conact us</a></li>
         </ul>
       </div>
     </div>

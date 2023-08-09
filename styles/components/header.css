@@ -21,11 +21,12 @@ header {
   border-radius: 0 0 4rem 4rem;
 }
 
-.header-top div {
+.header-top a {
   transition: .2s ease;
+  color: var(--white);
 }
 
-.header-top div:hover {
+.header-top a:hover {
   color: var(--red);
   cursor: pointer;
 }
@@ -38,7 +39,6 @@ header {
   justify-content: space-between;
   padding: 16rem 63.5rem 0;
   color: var(--white);
-  /* background-color: #251B59; */
   font: var(--font-s);
 }
 
