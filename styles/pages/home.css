@@ -586,6 +586,8 @@
   display: flex;
   align-items: center;
   gap: 10rem;
+  color: var(--deep-blue);
+  font: var(--font-m-medium);
 }
 
 #homepage-s6 .slider .left .title .icon{ 
@@ -599,7 +601,6 @@
   flex-direction: column;
   gap: 48rem;
   position: relative;
-  /* background-color: #eee; */
 }
 
 #homepage-s6 .slider .right::before{
@@ -626,12 +627,14 @@
   justify-content: space-between;
   align-items: center;
   font: var(--font-m-lato);
+
 }
 
 #homepage-s6 .slider .right .bottom .author{
   display: flex;
   align-items: center;
   gap: 16rem;
+  color: var(--deep-blue);
 }
 
 #homepage-s6 .slider .right .bottom .author::before{
@@ -807,7 +810,6 @@
 
 #homepage-s8 .resources-list .card .card-content .chips-block .chip{
   padding: 7rem 21rem;
-  background-color: #eee;
   border-radius: 6rem;
   font: var(--font-xs);
   border: 1px solid var(--red);
