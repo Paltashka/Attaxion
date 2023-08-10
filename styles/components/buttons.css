@@ -2,6 +2,8 @@ button {
   background: none;
   border: none;
   outline: none;
+  position: relative;
+  overflow: hidden;
 }
 
 button:hover {
@@ -21,10 +23,35 @@ button:disabled:hover {
 }
 
 .button-cta-gradient-outlined {
-  background-image: url('../../assets/images/button-cta-gradient-outlined.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
+  border-radius: 4rem;
+  z-index: 1;
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 1px transparent;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(90deg, rgba(120, 120, 255, 0.95) 0%, rgba(253, 168, 0, 0.95) 50.19%, rgba(255, 1, 129, 0.95) 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #261d42 inset;
 }
+
+.button-cta-gradient-outlined::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background: var(--gradient-3);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button-cta-gradient-outlined:hover::after {
+  width: 100%;
+  scale: 1.1;
+}
+
 
 .button-cta-arrow {
   display: flex;
@@ -52,6 +79,10 @@ button:disabled:hover {
 
 .button-cta-red {
   background-color: var(--red);
+}
+
+.button-cta-red:hover {
+  background-color: #CD0469;
 }
 
 /* OUTLINED */
@@ -94,7 +125,22 @@ button:disabled:hover {
 
 
 /* GRADIENT */
-.button-cta-gradient {
+.button-cta-gradient::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   color: var(--white);
-  background: var(--gradient-3);
+  position: absolute;
+  z-index: -1;
+  border-radius: 4rem;
+  transition: .1s ease;
+  background: linear-gradient(90deg, rgba(120, 120, 255, 0.95) 0%, rgba(253, 168, 0, 0.95) 50.19%, rgba(255, 1, 129, 0.95) 100%);
+}
+
+.button-cta-gradient:hover::before{
+  transform: scale(1.4);
 }
