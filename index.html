@@ -107,22 +107,60 @@
       <div class="title-block">
         <h3 class="title">Manage Your Attack Surface with Confidence</h3>
         <div class="tab-menu">
-          <div class="active">Discovery</div>
-          <div>Prioritization</div>
-          <div>Remedation</div>
-          <div>Monitaring</div>
+          <div class="active" data-s2-tab-name="discovery">Discovery</div>
+          <div data-s2-tab-name="prioritization">Prioritization</div>
+          <div data-s2-tab-name="remedation">Remedation</div>
+          <div data-s2-tab-name="monitaring">Monitaring</div>
         </div>
       </div>
-      <div class="content-block">
-        <div class="text-content">
-          <h3>Discover More <br> True Assets Faster</h3>
-          <p>Uncover all your known and unknown assets and their associated vulnerabilities using modern discovery
-            methods and reconnaissance technologies.</p>
-          <button class="button-cta-red" onclick="window.location.href='#'">Learn More</button>
+      <div class="content-block" id="s2-content-block">
+        <div class="content-block-item active" data-s2-tab-content="discovery">
+          <div class="text-content">
+            <h3>Discover More <br> True Assets Faster</h3>
+            <p>Uncover all your known and unknown assets and their associated vulnerabilities using modern discovery
+              methods and reconnaissance technologies.</p>
+            <button class="button-cta-red" onclick="window.location.href='#'">Learn More</button>
+          </div>
+          <div class="image-content">
+            <div id="image1"></div>
+            <div id="image2"></div>
+          </div>
         </div>
-        <div class="image-content">
-          <div id="image1"></div>
-          <div id="image2"></div>
+        <div class="content-block-item" data-s2-tab-content="prioritization">
+          <div class="text-content">
+            <h3>Identify Your <br> Most Risky Vulnerabilities</h3>
+            <p>Accurately prioritize vulnerabilities based on their severity, exploitability, and relevance to your
+              organization. Contextualize each issue with deep exploit intelligence.</p>
+            <button class="button-cta-red" onclick="window.location.href='#'">Learn More</button>
+          </div>
+          <div class="image-content">
+            <div id="image1"></div>
+            <div id="image2"></div>
+          </div>
+        </div>
+        <div class="content-block-item" data-s2-tab-content="remedation">
+          <div class="text-content">
+            <h3>Seamlessly Plan and Coordinate Remediation</h3>
+            <p>Centrally assign, track, and close remediation tasks to tackle your most critical vulnerabilities
+              efficiently with the help of automated workflows.</p>
+            <button class="button-cta-red" onclick="window.location.href='#'">Learn More</button>
+          </div>
+          <div class="image-content">
+            <div id="image1"></div>
+            <div id="image2"></div>
+          </div>
+        </div>
+        <div class="content-block-item" data-s2-tab-content="monitaring">
+          <div class="text-content">
+            <h3>Continuously Monitor Your Attack Surface</h3>
+            <p>Keep track of new assets and vulnerabilities as your digital perimeter grows and the threat landscape
+              continues to evolve</p>
+            <button class="button-cta-red" onclick="window.location.href='#'">Learn More</button>
+          </div>
+          <div class="image-content">
+            <div id="image1"></div>
+            <div id="image2"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -161,41 +199,74 @@
         </h2>
         <div class="toggle-menu">
           <span>Use case</span>
-          <div class="check">
+          <div class="check " id="s5-toggle-menu">
             <div></div>
           </div>
           <span>Industry</span>
         </div>
       </div>
       <div class="content-block">
-        <div class="card bg-glass" onclick="window.location.href='/use-case/reduce-attack-surface';">
-          <img class="card-image" src="assets/icons/card1.svg" alt="A computer monitor with a colorful triangle on it">
-          <div class="card-title">Reduce Your External
-            Attack Surface</div>
-          <div class="card-description">Continually eliminate your most pressing attack vectors, even as your digital
-            perimeter keeps expanding.
+        <div class="content-block-item active" data-s5-content="usecase">
+          <div class="card bg-glass" onclick="window.location.href='/use-case/reduce-attack-surface';">
+            <img class="card-image" src="assets/icons/card1.svg"
+              alt="A computer monitor with a colorful triangle on it">
+            <div class="card-title">Reduce Your External
+              Attack Surface</div>
+            <div class="card-description">Continually eliminate your most pressing attack vectors, even as your digital
+              perimeter keeps expanding.
+            </div>
+          </div>
+          <div class="card bg-glass" onclick="window.location.href='/use-case/shadow-it-visibility';">
+            <img class="card-image" src="assets/icons/card2.svg" alt="A magnifying glass icon">
+            <div class="card-title">Enhance Shadow
+              IT Visibility</div>
+            <div class="card-description">Discover all unsanctioned, forgotten, and misconfigured cloud and other assets
+              before attackers can exploit them.</div>
+          </div>
+          <div class="card bg-glass" onclick="window.location.href='/use-case/manage-your-threat-exposure';">
+            <img class="card-image" src="assets/icons/card3.svg" alt="A man sitting at a computer">
+            <div class="card-title">Manage Your
+              Threat Exposure</div>
+            <div class="card-description">Proactively identify exposed assets and address the most damaging weaknesses
+              to
+              your security posture.
+            </div>
+          </div>
+          <div class="card bg-glass" onclick="window.location.href='/use-case/assess-mergers-and-acquisitions-risks';">
+            <img class="card-image" src="assets/icons/card4.svg"
+              alt="A computer monitor with a colorful triangle on it">
+            <div class="card-title">Assess Mergers and Acquisitions Risks</div>
+            <div class="card-description">Enrich M&A due diligence and decisions with a detailed view of each
+              candidate’s
+              cyber risk profile.
+            </div>
           </div>
         </div>
-        <div class="card bg-glass" onclick="window.location.href='/use-case/shadow-it-visibility';">
-          <img class="card-image" src="assets/icons/card2.svg" alt="A magnifying glass icon">
-          <div class="card-title">Enhance Shadow
-            IT Visibility</div>
-          <div class="card-description">Discover all unsanctioned, forgotten, and misconfigured cloud and other assets
-            before attackers can exploit them.</div>
-        </div>
-        <div class="card bg-glass" onclick="window.location.href='/use-case/manage-your-threat-exposure';">
-          <img class="card-image" src="assets/icons/card3.svg" alt="A man sitting at a computer">
-          <div class="card-title">Manage Your
-            Threat Exposure</div>
-          <div class="card-description">Proactively identify exposed assets and address the most damaging weaknesses to
-            your security posture.
+        <div class="content-block-item" data-s5-content="industry">
+          <div class="card bg-glass" onclick="window.location.href='/use-case/shadow-it-visibility';">
+            <img class="card-image" src="assets/icons/card2.svg" alt="A magnifying glass icon">
+            <div class="card-title">Enhance Shadow
+              IT Visibility</div>
+            <div class="card-description">Discover all unsanctioned, forgotten, and misconfigured cloud and other assets
+              before attackers can exploit them.</div>
           </div>
-        </div>
-        <div class="card bg-glass" onclick="window.location.href='/use-case/assess-mergers-and-acquisitions-risks';">
-          <img class="card-image" src="assets/icons/card4.svg" alt="A computer monitor with a colorful triangle on it">
-          <div class="card-title">Assess Mergers and Acquisitions Risks</div>
-          <div class="card-description">Enrich M&A due diligence and decisions with a detailed view of each candidate’s
-            cyber risk profile.
+          <div class="card bg-glass" onclick="window.location.href='/use-case/manage-your-threat-exposure';">
+            <img class="card-image" src="assets/icons/card3.svg" alt="A man sitting at a computer">
+            <div class="card-title">Manage Your
+              Threat Exposure</div>
+            <div class="card-description">Proactively identify exposed assets and address the most damaging weaknesses
+              to
+              your security posture.
+            </div>
+          </div>
+          <div class="card bg-glass" onclick="window.location.href='/use-case/assess-mergers-and-acquisitions-risks';">
+            <img class="card-image" src="assets/icons/card4.svg"
+              alt="A computer monitor with a colorful triangle on it">
+            <div class="card-title">Assess Mergers and Acquisitions Risks</div>
+            <div class="card-description">Enrich M&A due diligence and decisions with a detailed view of each
+              candidate’s
+              cyber risk profile.
+            </div>
           </div>
         </div>
       </div>
@@ -207,20 +278,44 @@
             <img src="assets/icons/feedback.svg" class="icon" alt="Feedback Icon"></img>
             <span>What our clients say</span>
           </div>
-          <div class="dots"></div>
+          <div class="dots">
+            <div class="active"></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
-        <div class="right">
-          <h6 class="top">
-            Attaxion allowed us to see how vulnerable we were. The platform quickly showed us assets that have been
-            swept under the rug for years. It also provided very detailed context on how the assets
-            pointed back to us.
-          </h6>
-          <div class="bottom">
-            <div class="author">Director of Information Security at a SaaS Company</div>
-            <div class="controls">
-              <button><img src="assets/icons/arrow.svg" alt="Arrow left" /></button>
-              <button><img src="assets/icons/arrow.svg" alt="Arrow right" /></button>
+        <div class="right" id="s6-slider-content">
+          <div class="slider-content-item active">
+            <h6 class="top">
+              Attaxion allowed us to see how vulnerable we were. The platform quickly showed us assets that have been
+              swept under the rug for years. It also provided very detailed context on how the assets
+              pointed back to us.
+            </h6>
+            <div class="bottom">
+              <div class="author">Director of Information Security at a SaaS Company</div>
             </div>
+          </div>
+          <div class="slider-content-item">
+            <h6 class="top">
+              Attaxion allowed us to see how vulnerable we were. The platform quickly showed us assets that have been
+              swept under the rug for years.
+            </h6>
+            <div class="bottom">
+              <div class="author">Client 1</div>
+            </div>
+          </div>
+          <div class="slider-content-item">
+            <h6 class="top">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus dignissimos laborum ut adipisci alias
+              temporibus repellat debitis ipsam corporis ratione.
+            </h6>
+            <div class="bottom">
+              <div class="author">Client 2</div>
+            </div>
+          </div>
+          <div class="controls">
+            <button id="s6-slider-preview"><img src="assets/icons/arrow.svg" alt="Arrow left" /></button>
+            <button id="s6-slider-next"><img src="assets/icons/arrow.svg" alt="Arrow right" /></button>
           </div>
         </div>
       </div>
