@@ -750,11 +750,17 @@
   gap: 40rem;
 }
 
-#homepage-s6 .slider .right .controls button img{
+#homepage-s6 .slider .right .controls button svg{
   width: 25rem;
-  color: #251B59;
+  height: 8rem;
+  transition: .2s ease;
+  fill: #251B59;
 }
-#homepage-s6 .slider .right .controls button:first-child img{
+
+#homepage-s6 .slider .right .controls button:hover svg {
+  fill: var(--red);
+}
+#homepage-s6 .slider .right .controls button:first-child svg{
   transform: rotateZ(180deg);
 }
 
