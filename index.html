@@ -19,9 +19,11 @@
 <body class="preload">
   <header>
     <div class="header-top">
-      <a href="/external-attack-surface-management">EXTERNAL ATTACK SURFACE MANAGMENT</a>
-      <a href="#">VULNERABILITY MANAGMENT</a>
-      <a href="#">CYBER THREAT INTELLIGENCE</a>
+      <ul>
+        <li><a href="/external-attack-surface-management">EXTERNAL ATTACK SURFACE MANAGMENT</a></li>
+        <li><a href="#">VULNERABILITY MANAGMENT</a></li>
+        <li><a href="#">CYBER THREAT INTELLIGENCE</a></li>
+      </ul>
     </div>
     <div class="header-bottom">
       <a href="/"><img class="logo" alt="Attaxion Logo" src="assets/icons/logo.svg" alt="Attaxion logo" /></a>
@@ -404,10 +406,17 @@
       <img src="assets/icons/logo.svg" alt="Attaxion Logo" class="logo">
       <button class="button-cta-gradient-outlined" onclick="window.location.href='/request-demo'">Request a
         Demo</button>
-      <div class="input-block">
+      <form class="input-block">
         <label>Sign up to our newsletter</label>
         <input placeholder="samantha@attaxion.studio" type="text">
-      </div>
+        <button type="submit">
+          <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.3137 1.34315C13.3137 0.790867 12.866 0.343152 12.3137 0.343152L3.31371 0.343152C2.76142 0.343152 2.31371 0.790867 2.31371 1.34315C2.31371 1.89544 2.76142 2.34315 3.31371 2.34315H11.3137V10.3432C11.3137 10.8954 11.7614 11.3432 12.3137 11.3432C12.866 11.3432 13.3137 10.8954 13.3137 10.3432L13.3137 1.34315ZM1.70711 13.364L13.0208 2.05026L11.6066 0.636045L0.292893 11.9498L1.70711 13.364Z"
+              fill="#B5AEC1" />
+          </svg>
+        </button>
+      </form>
     </div>
     <div class="grid-item footer-info2">
       <div class="footer-list">
@@ -476,11 +485,11 @@
       </div>
     </div>
     <div class="grid-item footer-bottom">
-      <div class="info">
-        <span>© 2023 Attaxion, LLC</span>
-        <span>Terms of Service</span>
-        <span>Privacy Policy</span>
-      </div>
+      <ul class="info">
+        <li>© 2023 Attaxion, LLC</li>
+        <li><a href="">Terms of Service</a></li>
+        <li><a href="">Privacy Policy</a></li>
+      </ul>
 
       <div class="socials">
         <a href="#" target="_blank" rel="nofollow"><img src="assets/icons/facebook.svg" alt="Facebook"></a>

@@ -44,20 +44,31 @@ footer .grid-item{
   font: var(--font-m-lato);
   flex-direction: column;
   gap: 8rem;
+  position: relative;
 }
 
 .footer-info1 .input-block input{
-  background: url('../../assets/icons/input-arrow.svg');
-  background-size: auto 14rem;
+  /* background: url('../../assets/icons/input-arrow.svg'); */
+  /* background-size: auto 14rem;
   background-repeat: no-repeat;
   background-position-y: center;
-  background-position-x: calc(100% - 15rem);
+  background-position-x: calc(100% - 15rem); */
   outline: none;
   border: none;
   font: var(--font-s);
   color: #B5AEC1;
+  background: transparent;
   border-bottom: 1rem solid #716785;
   padding: 16rem 0;
+}
+
+.footer-info1 .input-block button {
+  position: absolute;
+  right: 15rem;
+  width: 14rem;
+  height: 14rem;
+  bottom: 0;
+  transform: translateY(-125%);
 }
 
 .footer-info2 {
@@ -129,6 +140,15 @@ footer .grid-item{
 .footer-bottom .info{
   display: flex;
   gap: 64rem;
+}
+
+.footer-bottom .info li, .footer-bottom .info a {
+  color: #B5AEC1;
+  transition: .2s ease;
+}
+
+.footer-bottom .info a:hover {
+  color: var(--red);
 }
 
 .footer-bottom .socials{

@@ -7,7 +7,7 @@ header {
   z-index: 10;
 }
 
-.header-top {
+.header-top ul {
   display: flex;
   width: 100%;
   justify-content: center;
