@@ -608,7 +608,6 @@
 #homepage-s5 .content-block {
   padding-left: 80rem; 
   padding-right: 48rem;
-
 }
 
 #homepage-s5 .content-block-item  {
@@ -620,7 +619,8 @@
 }
 
 #homepage-s5 .content-block-item:has(> :last-child:nth-child(5)) {
-  gap: 32rem;
+  max-width: 80%;
+  margin: auto;
 }
 
 #homepage-s5 .content-block-item.active {
