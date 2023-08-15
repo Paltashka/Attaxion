@@ -58,26 +58,27 @@ button, .button {
   opacity: 1;
 }
 
-.button-cta-arrow {
+.button-cta-icon {
   display: flex;
   align-items: center;
   gap: 8rem;
+  padding: 0 5rem;
   font: var(--font-m);
   font-style: italic;
   color: var(--light-violet);
 }
 
-.button-cta-arrow .arrow-icon {
+.button-cta-icon .arrow-icon {
   width: 24rem;
   height: 24rem;
   color: var(--yellow);
 }
 
-.button-cta-arrow:hover {
+.button-cta-icon:hover {
   color: var(--yellow);
 }
 
-.button-cta-arrow:disabled, .button-cta-arrow:disabled .arrow-icon {
+.button-cta-icon:disabled, .button-cta-icon:disabled .arrow-icon {
   color: var(--color-text);
 }
 
