@@ -56,8 +56,8 @@
         </ul>
       </nav>
 
-      <button class="button-cta-red" onclick="window.location.href='/request-demo'">Request
-        Demo</button>
+      <a href="/request-demo" class="button button-cta-red">Request
+        Demo</a>
     </div>
   </header>
   <main>
@@ -89,8 +89,8 @@
           critical vulnerabilities.
           Orchestrate risk remediation seamlessly.</p>
         <div class="buttons">
-          <button class="button-cta-gradient" onclick="window.location.href='/request-demo'">Request Demo</button>
-          <button class="button-cta-red-outlined" onclick="window.location.href='#'">Apply for Early Access</button>
+          <a href="/request-demo" class="button button-cta-gradient">Request Demo</a>
+          <a href="#" class="button button-cta-red-outlined">Apply for Early Access</a>
         </div>
       </div>
       <div class="content-block">
@@ -121,7 +121,8 @@
             <h3>Discover More <br> True Assets Faster</h3>
             <p>Uncover all your known and unknown assets and their associated vulnerabilities using modern discovery
               methods and reconnaissance technologies.</p>
-            <button class="button-cta-red" onclick="window.location.href='#'">Learn More</button>
+            <a href="#" class="button button-cta-red">Learn More</a>
+            <!-- <button class="">Learn more</button> -->
           </div>
           <div class="image-content">
             <div id="image1"></div>
@@ -133,7 +134,7 @@
             <h3>Identify Your <br> Most Risky Vulnerabilities</h3>
             <p>Accurately prioritize vulnerabilities based on their severity, exploitability, and relevance to your
               organization. Contextualize each issue with deep exploit intelligence.</p>
-            <button class="button-cta-red" onclick="window.location.href='#'">Learn More</button>
+            <a href="#" class="button button-cta-red">Learn More</a>
           </div>
           <div class="image-content">
             <div id="image1"></div>
@@ -145,7 +146,7 @@
             <h3>Seamlessly Plan and Coordinate Remediation</h3>
             <p>Centrally assign, track, and close remediation tasks to tackle your most critical vulnerabilities
               efficiently with the help of automated workflows.</p>
-            <button class="button-cta-red" onclick="window.location.href='#'">Learn More</button>
+            <a href="#" class="button button-cta-red">Learn More</a>
           </div>
           <div class="image-content">
             <div id="image1"></div>
@@ -157,7 +158,7 @@
             <h3>Continuously Monitor Your Attack Surface</h3>
             <p>Keep track of new assets and vulnerabilities as your digital perimeter grows and the threat landscape
               continues to evolve</p>
-            <button class="button-cta-red" onclick="window.location.href='#'">Learn More</button>
+            <a href="#" class="button-cta-red">Learn More</a>
           </div>
           <div class="image-content">
             <div id="image1"></div>
@@ -168,15 +169,15 @@
     </section>
     <section id="homepage-s3">
       <div class="count-item">
-        <h2>99%</h2>
+        <h2><span class="count-data">99</span>%</h2>
         <span>IP ports scanned</span>
       </div>
       <div class="count-item">
-        <h2>5+</h2>
+        <h2><span class="count-data">5</span>+</h2>
         <span>Years of historical asset context</span>
       </div>
       <div class="count-item">
-        <h2>60%</h2>
+        <h2><span class="count-data">60</span>%</h2>
         <span>Reduction in remedation time</span>
       </div>
     </section>
@@ -188,7 +189,7 @@
       <div class="card bg-glass">
         <h5>Beat attackers at their own game with Attaxion.</h5>
         <p>Start your 14-day free trial or request a demo.</p>
-        <button class="button-cta-gradient" onclick="window.location.href='#'">Start Free Trial</button>
+        <a href="#" class="button button-cta-gradient">Start Free Trial</a>
       </div>
     </section>
     <section id="homepage-s5">
@@ -201,75 +202,106 @@
         </h2>
         <div class="toggle-menu">
           <span>Use case</span>
-          <div class="check " id="s5-toggle-menu">
-            <div></div>
-          </div>
+          <label class="s5-toggle-menu">
+            <input type="checkbox" id="s5-toggle-check">
+            <span class="toggle"></span>
+          </label>
           <span>Industry</span>
         </div>
       </div>
       <div class="content-block">
         <div class="content-block-item active" data-s5-content="usecase">
-          <div class="card bg-glass" onclick="window.location.href='/use-case/reduce-attack-surface';">
-            <img class="card-image" src="assets/icons/card1.svg"
-              alt="A computer monitor with a colorful triangle on it">
-            <div class="card-title">Reduce Your External
-              Attack Surface</div>
-            <div class="card-description">Continually eliminate your most pressing attack vectors, even as your digital
-              perimeter keeps expanding.
+          <a href="/use-case/reduce-attack-surface">
+            <div class="card bg-glass">
+              <img class="card-image" src="assets/icons/card1.svg"
+                alt="A computer monitor with a colorful triangle on it">
+              <div class="card-title">Reduce Your External
+                Attack Surface</div>
+              <div class="card-description">Continually eliminate your most pressing attack vectors, even as your
+                digital
+                perimeter keeps expanding.
+              </div>
             </div>
-          </div>
-          <div class="card bg-glass" onclick="window.location.href='/use-case/shadow-it-visibility';">
-            <img class="card-image" src="assets/icons/card2.svg" alt="A magnifying glass icon">
-            <div class="card-title">Enhance Shadow
-              IT Visibility</div>
-            <div class="card-description">Discover all unsanctioned, forgotten, and misconfigured cloud and other assets
-              before attackers can exploit them.</div>
-          </div>
-          <div class="card bg-glass" onclick="window.location.href='/use-case/manage-your-threat-exposure';">
-            <img class="card-image" src="assets/icons/card3.svg" alt="A man sitting at a computer">
-            <div class="card-title">Manage Your
-              Threat Exposure</div>
-            <div class="card-description">Proactively identify exposed assets and address the most damaging weaknesses
-              to
-              your security posture.
+          </a>
+          <a href="/use-case/shadow-it-visibility">
+            <div class="card bg-glass">
+              <img class="card-image" src="assets/icons/card2.svg" alt="A magnifying glass icon">
+              <div class="card-title">Enhance Shadow
+                IT Visibility</div>
+              <div class="card-description">Discover all unsanctioned, forgotten, and misconfigured cloud and other
+                assets
+                before attackers can exploit them.</div>
             </div>
-          </div>
-          <div class="card bg-glass" onclick="window.location.href='/use-case/assess-mergers-and-acquisitions-risks';">
-            <img class="card-image" src="assets/icons/card4.svg"
-              alt="A computer monitor with a colorful triangle on it">
-            <div class="card-title">Assess Mergers and Acquisitions Risks</div>
-            <div class="card-description">Enrich M&A due diligence and decisions with a detailed view of each
-              candidate’s
-              cyber risk profile.
+          </a>
+          <a href="/use-case/manage-your-threat-exposure">
+            <div class="card bg-glass">
+              <img class="card-image" src="assets/icons/card3.svg" alt="A man sitting at a computer">
+              <div class="card-title">Manage Your
+                Threat Exposure</div>
+              <div class="card-description">Proactively identify exposed assets and address the most damaging weaknesses
+                to
+                your security posture.
+              </div>
             </div>
-          </div>
+          </a>
+          <a href="/use-case/assess-mergers-and-acquisitions-risks">
+            <div class="card bg-glass">
+              <img class="card-image" src="assets/icons/card4.svg"
+                alt="A computer monitor with a colorful triangle on it">
+              <div class="card-title">Assess Mergers and Acquisitions Risks</div>
+              <div class="card-description">Enrich M&A due diligence and decisions with a detailed view of each
+                candidate’s
+                cyber risk profile.
+              </div>
+            </div>
         </div>
+        </a>
         <div class="content-block-item" data-s5-content="industry">
-          <div class="card bg-glass" onclick="window.location.href='/use-case/shadow-it-visibility';">
-            <img class="card-image" src="assets/icons/card2.svg" alt="A magnifying glass icon">
-            <div class="card-title">Enhance Shadow
-              IT Visibility</div>
-            <div class="card-description">Discover all unsanctioned, forgotten, and misconfigured cloud and other assets
-              before attackers can exploit them.</div>
-          </div>
-          <div class="card bg-glass" onclick="window.location.href='/use-case/manage-your-threat-exposure';">
-            <img class="card-image" src="assets/icons/card3.svg" alt="A man sitting at a computer">
-            <div class="card-title">Manage Your
-              Threat Exposure</div>
-            <div class="card-description">Proactively identify exposed assets and address the most damaging weaknesses
-              to
-              your security posture.
+          <a href="/industry/financial-services">
+            <div class="card bg-glass">
+              <img class="card-image" src="assets/icons/card1.svg" alt="A magnifying glass icon">
+              <div class="card-title">Financial Services</div>
+              <div class="card-description">Safeguard financial data from fraud and cyber threats with real-time
+                visibility into all your digital touchpoints.</div>
             </div>
-          </div>
-          <div class="card bg-glass" onclick="window.location.href='/use-case/assess-mergers-and-acquisitions-risks';">
-            <img class="card-image" src="assets/icons/card4.svg"
-              alt="A computer monitor with a colorful triangle on it">
-            <div class="card-title">Assess Mergers and Acquisitions Risks</div>
-            <div class="card-description">Enrich M&A due diligence and decisions with a detailed view of each
-              candidate’s
-              cyber risk profile.
+          </a>
+          <a href="/industry/online-marketplaces">
+            <div class="card bg-glass">
+              <img class="card-image" src="assets/icons/card2.svg" alt="A magnifying glass icon">
+              <div class="card-title">Online Marketplaces</div>
+              <div class="card-description">Provide users with secure and compliant digital infrastructures to conduct
+                online business operations.</div>
             </div>
-          </div>
+          </a>
+          <a href="/industry/it-saas-vendors">
+            <div class="card bg-glass">
+              <img class="card-image" src="assets/icons/card3.svg" alt="A magnifying glass icon">
+              <div class="card-title">IT and SaaS Vendors</div>
+              <div class="card-description">Tackle the security gaps of in-development and already launched applications
+                and connected IT infrastructures.</div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="card bg-glass">
+              <img class="card-image" src="assets/icons/card3.svg" alt="A man sitting at a computer">
+              <div class="card-title">Healthcare</div>
+              <div class="card-description">Protect sensitive patient data and medical systems through continuous asset
+                discovery and vulnerability remediation.
+              </div>
+
+            </div>
+          </a>
+          <a href="/industry/government-entities">
+            <div class="card bg-glass">
+              <img class="card-image" src="assets/icons/card4.svg"
+                alt="A computer monitor with a colorful triangle on it">
+              <div class="card-title">Government Entities</div>
+              <div class="card-description">Strengthen national security protection with detailed attack surface
+                insights
+                into mission-critical infrastructures.
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -344,11 +376,11 @@
             identify weaknesses in the organization's infrastructure, applications, and web services.
           </p>
           <div class="buttons">
-            <button class="button-cta-gradient" onclick="window.location.href='#'">Start Free Trial</button>
-            <button class="button-cta-arrow" onclick="window.location.href='#'">
+            <a href="#" class="button button-cta-gradient">Start Free Trial</a>
+            <a href="#" class="button button-cta-arrow">
               <span>Learn more </span>
               <img src="assets/icons/button-arrow.svg" class="arrow-icon"></img>
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -362,50 +394,65 @@
     <section id="homepage-s8">
       <h3>Featured Resources</h3>
       <div class="resources-list">
-        <div class="card" onclick="window.location.href='#';">
-          <img src="assets/images/featured-1.webp" class="card-image"></img>
-          <div class="card-content">
-            <div class="chips-block">
-              <div class="chip">Business</div>
-              <div class="chip">Analytics</div>
+        <a href="#">
+          <div class="card">
+            <img src="assets/images/featured-1.webp" class="card-image"></img>
+            <div class="card-content">
+              <div class="chips-block">
+                <div class="chip">Business</div>
+                <div class="chip">Analytics</div>
+              </div>
+              <p class="title">Support During the Exponential Growth</p>
+              <p class="description">Vel nihil cumque quos dolorem culpa. Deleniti officiis et et quisquam voluptas.
+                Asperiores error eum saepe qui omnis at velit […]</p>
+              <button class="button-cta-arrow">Learn more
+                <img src="assets/icons/button-arrow.svg" class="arrow-icon"></img>
+              </button>
             </div>
-            <p class="title">Support During the Exponential Growth</p>
-            <p class="description">Vel nihil cumque quos dolorem culpa. Deleniti officiis et et quisquam voluptas.
-              Asperiores error eum saepe qui omnis at velit […]</p>
           </div>
-        </div>
-        <div class="card" onclick="window.location.href='#';">
-          <img src="assets/images/featured-2.webp" class="card-image"></img>
-          <div class="card-content">
-            <div class="chips-block">
-              <div class="chip">Business</div>
-              <div class="chip">Analytics</div>
+        </a>
+        <a href="#">
+          <div class="card">
+            <img src="assets/images/featured-2.webp" class="card-image"></img>
+            <div class="card-content">
+              <div class="chips-block">
+                <div class="chip">Business</div>
+                <div class="chip">Analytics</div>
+              </div>
+              <p class="title">Time-tracking Dos and Don’ts</p>
+              <p class="description">Vel nihil cumque quos dolorem culpa. Deleniti officiis et et quisquam voluptas.
+                Asperiores error eum saepe qui omnis at velit […]</p>
+              <button class="button-cta-arrow">Learn more
+                <img src="assets/icons/button-arrow.svg" class="arrow-icon"></img>
+              </button>
             </div>
-            <p class="title">Time-tracking Dos and Don’ts</p>
-            <p class="description">Vel nihil cumque quos dolorem culpa. Deleniti officiis et et quisquam voluptas.
-              Asperiores error eum saepe qui omnis at velit […]</p>
           </div>
-        </div>
-        <div class="card" onclick="window.location.href='#';">
-          <img src="assets/images/featured-3.webp" class="card-image"></img>
-          <div class="card-content">
-            <div class="chips-block">
-              <div class="chip">Business</div>
-              <div class="chip">Analytics</div>
+        </a>
+        <a href="#">
+          <div class="card">
+            <img src="assets/images/featured-3.webp" class="card-image"></img>
+            <div class="card-content">
+              <div class="chips-block">
+                <div class="chip">Business</div>
+                <div class="chip">Analytics</div>
+              </div>
+              <p class="title">The Importance of Making Content</p>
+              <p class="description">Vel nihil cumque quos dolorem culpa. Deleniti officiis et et quisquam voluptas.
+                Asperiores error eum saepe qui omnis at velit […]</p>
+              <button class="button-cta-arrow">Learn more
+                <img src="assets/icons/button-arrow.svg" class="arrow-icon"></img>
+              </button>
             </div>
-            <p class="title">The Importance of Making Content</p>
-            <p class="description">Vel nihil cumque quos dolorem culpa. Deleniti officiis et et quisquam voluptas.
-              Asperiores error eum saepe qui omnis at velit […]</p>
           </div>
-        </div>
+        </a>
       </div>
     </section>
   </main>
   <footer>
     <div class="grid-item footer-info1">
       <img src="assets/icons/logo.svg" alt="Attaxion Logo" class="logo">
-      <button class="button-cta-gradient-outlined" onclick="window.location.href='/request-demo'">Request a
-        Demo</button>
+      <a href="/request-demo" class="button button-cta-gradient-outlined">Request a
+        Demo</a>
       <form class="input-block">
         <label>Sign up to our newsletter</label>
         <input placeholder="samantha@attaxion.studio" type="text">
@@ -499,6 +546,8 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="./scripts/script.js"></script>
 </body>
 

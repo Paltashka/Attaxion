@@ -64,17 +64,15 @@ tabMenu.addEventListener('click', function (e) {
   var contentToBeDisplayed = document.querySelector("[data-s2-tab-content=\"".concat(selectedTabName, "\"]"));
   contentToBeDisplayed.classList.add('active');
 });
-var toggleMenu = document.getElementById('s5-toggle-menu');
-toggleMenu.addEventListener('click', function (e) {
+var toggleCheck = document.getElementById('s5-toggle-check');
+toggleCheck.addEventListener('click', function (e) {
   var industryContent = document.querySelector("[data-s5-content=\"industry\"]");
   var usecaseContent = document.querySelector("[data-s5-content=\"usecase\"]");
 
-  if (toggleMenu.className.includes('active')) {
-    toggleMenu.classList.remove('active');
+  if (!toggleCheck.checked) {
     industryContent.classList.remove('active');
     usecaseContent.classList.add('active');
   } else {
-    toggleMenu.classList.add('active');
     usecaseContent.classList.remove('active');
     industryContent.classList.add('active');
   }
@@ -109,4 +107,18 @@ document.getElementById('s6-slider-next').addEventListener('click', function (e)
 
   sliderContent[currentActiveIndex].classList.remove('active');
   sliderContent[currentActiveIndex + 1].classList.add('active');
+});
+var counters = document.querySelectorAll('#homepage-s3 .count-data');
+var countersAnimation = gsap.from(counters, {
+  textContent: 0,
+  duration: 2,
+  ease: 'power1.in',
+  snap: {
+    textContent: 1
+  }
+});
+ScrollTrigger.create({
+  trigger: '#homepage-s3',
+  start: 'top 80%',
+  animation: countersAnimation
 });

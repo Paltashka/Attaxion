@@ -1,4 +1,4 @@
-button {
+button, .button {
   background: none;
   border: none;
   outline: none;
@@ -6,11 +6,17 @@ button {
   overflow: hidden;
 }
 
-button:hover {
+.button {
+  display: block;
+  text-align: center;
+  width: fit-content;
+}
+
+.button:hover,  button:hover {
   cursor: pointer;
 }
 
-button:disabled:hover {
+.button.disabled:hover, button:disabled:hover {
   cursor: auto;
 }
 
@@ -38,20 +44,19 @@ button:disabled:hover {
   position: absolute;
   inset: 0;
   margin: auto;
-  width: 0%;
-  height: 100%;
+  width: 110%;
+  height: 110%;
   border-radius: inherit;
-  scale: 0;
+  opacity: 0;
+  scale: 1;
   z-index: -1;
   background: var(--gradient-3);
   transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
 .button-cta-gradient-outlined:hover::after {
-  width: 100%;
-  scale: 1.1;
+  opacity: 1;
 }
-
 
 .button-cta-arrow {
   display: flex;
@@ -92,29 +97,10 @@ button:disabled:hover {
   border: 1rem solid var(--red);
   color: var(--red);
 }
-.button-cta-red-outlined::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  width: 0%;
-  height: 100%;
-  border-radius: inherit;
-  scale: 0;
-  z-index: -1;
-  background-color: var(--red);
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-}
 
 .button-cta-red-outlined:hover {
   color: var(--white); 
-  scale: 1.05;
-}
-
-
-.button-cta-red-outlined:hover::before {
-  width: 100%;
-  scale: 1.1;
+  background-color: var(--red);
 }
 
 .button-cta-red-outlined:disabled, .button-cta-red-outlined:disabled:hover{

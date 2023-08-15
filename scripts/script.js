@@ -27,20 +27,18 @@ tabMenu.addEventListener('click', (e) => {
   contentToBeDisplayed.classList.add('active');
 });
 
-const toggleMenu = document.getElementById('s5-toggle-menu');
-toggleMenu.addEventListener('click', (e) => {
+const toggleCheck = document.getElementById('s5-toggle-check');
+toggleCheck.addEventListener('click', (e) => {
   const industryContent = document.querySelector(
     `[data-s5-content="industry"]`
   );
   const usecaseContent = document.querySelector(`[data-s5-content="usecase"]`);
 
-  if (toggleMenu.className.includes('active')) {
-    toggleMenu.classList.remove('active');
+  if (!toggleCheck.checked) {
     industryContent.classList.remove('active');
 
     usecaseContent.classList.add('active');
   } else {
-    toggleMenu.classList.add('active');
     usecaseContent.classList.remove('active');
 
     industryContent.classList.add('active');
@@ -79,4 +77,19 @@ document.getElementById('s6-slider-next').addEventListener('click', (e) => {
 
   sliderContent[currentActiveIndex].classList.remove('active');
   sliderContent[currentActiveIndex + 1].classList.add('active');
+});
+
+const counters = document.querySelectorAll('#homepage-s3 .count-data');
+
+const countersAnimation = gsap.from(counters, {
+  textContent: 0,
+  duration: 2,
+  ease: 'power1.in',
+  snap: { textContent: 1 },
+});
+
+ScrollTrigger.create({
+  trigger: '#homepage-s3',
+  start: 'top 80%',
+  animation: countersAnimation,
 });
