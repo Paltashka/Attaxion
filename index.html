@@ -333,19 +333,16 @@
       </div>
     </section>
     <section id="homepage-s6">
-      <div class="slider">
-        <div class="left">
+      <div class="slider" id="homepage-s6-slider">
+        <div class=" left">
           <div class="title">
             <img src="assets/icons/feedback.svg" class="icon" alt="Feedback Icon"></img>
             <span>What our clients say</span>
           </div>
           <div class="dots">
-            <div class="active"></div>
-            <div></div>
-            <div></div>
           </div>
         </div>
-        <div class="right" id="s6-slider-content">
+        <div class="right">
           <div class="slider-content-item active">
             <h6 class="top">
               Attaxion allowed us to see how vulnerable we were. The platform quickly showed us assets that have been
@@ -375,14 +372,14 @@
             </div>
           </div>
           <div class="controls">
-            <button id="s6-slider-preview"><svg width="21" height="8" viewBox="0 0 21 8" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+            <button class="slider-previous-button" id="s6-slider-preview"><svg width="21" height="8" viewBox="0 0 21 8"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64644L17.1716 0.464465C16.9763 0.269202 16.6597 0.269202 16.4645 0.464465C16.2692 0.659727 16.2692 0.976309 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.73079 16.9763 7.73079 17.1716 7.53553L20.3536 4.35355ZM4.37114e-08 4.5L20 4.5L20 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z" />
               </svg>
             </button>
-            <button id="s6-slider-next"><svg width="21" height="8" viewBox="0 0 21 8" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+            <button class="slider-next-button" id="s6-slider-next"><svg width="21" height="8" viewBox="0 0 21 8"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64644L17.1716 0.464465C16.9763 0.269202 16.6597 0.269202 16.4645 0.464465C16.2692 0.659727 16.2692 0.976309 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.73079 16.9763 7.73079 17.1716 7.53553L20.3536 4.35355ZM4.37114e-08 4.5L20 4.5L20 3.5L-4.37114e-08 3.5L4.37114e-08 4.5Z" />
               </svg>
@@ -580,6 +577,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="./scripts/slider.js"></script>
   <script src="./scripts/script.js"></script>
 </body>
 

@@ -45,39 +45,8 @@ toggleCheck.addEventListener('click', (e) => {
   }
 });
 
-const sliderContent = document.querySelectorAll('.slider-content-item');
-
-document.getElementById('s6-slider-preview').addEventListener('click', () => {
-  let currentActiveIndex = 0;
-  sliderContent.forEach((item, index) => {
-    if (item.className.includes('active')) {
-      currentActiveIndex = index;
-    }
-  });
-
-  if (currentActiveIndex === 0) {
-    return;
-  }
-
-  sliderContent[currentActiveIndex].classList.remove('active');
-  sliderContent[currentActiveIndex - 1].classList.add('active');
-});
-
-document.getElementById('s6-slider-next').addEventListener('click', (e) => {
-  let currentActiveIndex = 0;
-  sliderContent.forEach((item, index) => {
-    if (item.className.includes('active')) {
-      currentActiveIndex = index;
-    }
-  });
-
-  if (currentActiveIndex === sliderContent.length - 1) {
-    return;
-  }
-
-  sliderContent[currentActiveIndex].classList.remove('active');
-  sliderContent[currentActiveIndex + 1].classList.add('active');
-});
+const slider = document.querySelector('#homepage-s6-slider');
+new Slider(slider);
 
 const counters = document.querySelectorAll('#homepage-s3 .count-data');
 

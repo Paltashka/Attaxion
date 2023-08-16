@@ -77,37 +77,8 @@ toggleCheck.addEventListener('click', function (e) {
     industryContent.classList.add('active');
   }
 });
-var sliderContent = document.querySelectorAll('.slider-content-item');
-document.getElementById('s6-slider-preview').addEventListener('click', function () {
-  var currentActiveIndex = 0;
-  sliderContent.forEach(function (item, index) {
-    if (item.className.includes('active')) {
-      currentActiveIndex = index;
-    }
-  });
-
-  if (currentActiveIndex === 0) {
-    return;
-  }
-
-  sliderContent[currentActiveIndex].classList.remove('active');
-  sliderContent[currentActiveIndex - 1].classList.add('active');
-});
-document.getElementById('s6-slider-next').addEventListener('click', function (e) {
-  var currentActiveIndex = 0;
-  sliderContent.forEach(function (item, index) {
-    if (item.className.includes('active')) {
-      currentActiveIndex = index;
-    }
-  });
-
-  if (currentActiveIndex === sliderContent.length - 1) {
-    return;
-  }
-
-  sliderContent[currentActiveIndex].classList.remove('active');
-  sliderContent[currentActiveIndex + 1].classList.add('active');
-});
+var slider = document.querySelector('#homepage-s6-slider');
+new Slider(slider);
 var counters = document.querySelectorAll('#homepage-s3 .count-data');
 var countersAnimation = gsap.from(counters, {
   textContent: 0,

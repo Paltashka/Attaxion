@@ -757,7 +757,7 @@
   display: flex;
 }
 
-#homepage-s6 .slider .right .slider-content-item.active .top, #homepage-s6 .slider .right .slider-content-item.active .author{  animation: contentAnimation .4s ease;} 
+#homepage-s6 .slider .right .slider-content-item.active .top, #homepage-s6 .slider .right .slider-content-item.active .author{  animation: contentAnimation 1s ease;} 
 
 #homepage-s6 .slider .right::before{
   content: url('');
