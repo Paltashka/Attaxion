@@ -47,12 +47,7 @@ footer .grid-item{
   position: relative;
 }
 
-.footer-info1 .input-block input{
-  /* background: url('../../assets/icons/input-arrow.svg'); */
-  /* background-size: auto 14rem;
-  background-repeat: no-repeat;
-  background-position-y: center;
-  background-position-x: calc(100% - 15rem); */
+.footer-info1 .input-block #footer-signup-input{
   outline: none;
   border: none;
   font: var(--font-s);
@@ -62,6 +57,28 @@ footer .grid-item{
   padding: 16rem 0;
 }
 
+#footer-signup-input::placeholder {
+  transition: .2s ease;
+}
+
+.footer-info1 .input-block .input-highlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1rem;
+  width: 0;
+  background-color: var(--violet);
+  transition: all 0.3s ease;
+}
+
+#footer-signup-input:focus#footer-signup-input::placeholder, #footer-signup-input:focus#footer-signup-input {
+  color: var(--blue);
+}
+
+#footer-signup-input:focus + .input-highlight {
+  width: 100%;
+}
+
 .footer-info1 .input-block button {
   position: absolute;
   right: 15rem;
@@ -69,6 +86,15 @@ footer .grid-item{
   height: 14rem;
   bottom: 0;
   transform: translateY(-125%);
+}
+
+.footer-info1 .input-block button svg{
+  fill: #B5AEC1;
+  transition: .2s ease;
+}
+
+.footer-info1 .input-block button:hover svg {
+  fill: var(--violet);
 }
 
 .footer-info2 {
