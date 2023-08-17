@@ -1,0 +1,178 @@
+.card-solutions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 56rem 0;
+  border-radius: 20rem;
+  max-width: 304rem;
+  min-width: 300rem;
+  min-height: 314rem;
+  border: 1rem solid #ff018000;
+  box-shadow: 0px 10px 36px 0px #0000001A, 2rem 1000rem 1px rgba(255, 255, 255, 0.1) inset;
+  transition: scale .2s ease;
+  z-index: 1;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  border: 1rem solid var(--blue);
+  color: var(--white);
+  position: relative;
+  transition: .2s ease;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(90deg, rgba(120, 120, 255, 0) 0%, rgba(253, 168, 0, 0) 50.19%, rgba(255, 1, 129, 0) 100%);
+}
+
+.card-solutions .card-content {
+  position: absolute;
+  width: 100%;
+  padding: 0 24rem;
+  z-index: 2;
+}
+
+.card-solutions .card-image{
+  width: 56rem;
+  height: 56rem;
+}
+
+.card-solutions .card-title{
+  font: var(--font-l);
+  margin-top: 24rem;
+  margin-bottom: 16rem;
+}
+
+.card-solutions .card-description{
+  font: var(--font-s-140);
+  color: #B5AEC1;
+}
+
+.card-solutions .button {
+  margin-top: 0rem;
+  position: absolute;
+  bottom: 32rem;
+  opacity: 0;
+  transition: .2s ease;
+}
+
+.card-solutions .button .tap-icon{
+  width: 15rem;
+}
+
+.card-solutions:hover{
+  cursor: pointer;
+  border: solid 1rem transparent;
+  box-shadow: 2rem 1000rem 1rem #1e1e86 inset;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(90deg, rgba(120, 120, 255, 0.9) 0%, rgba(253, 168, 0, 0.9) 50.19%, rgba(255, 1, 129, 0.9) 100%);
+  scale: 1.01;
+  padding-bottom: 100rem;
+}
+
+.card-solutions:hover .button{
+  display: flex;
+  opacity: 1;
+} 
+
+
+/* CARD NEWS */
+.card-news {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20rem;
+  position: relative;
+  overflow: hidden;
+  border: 1rem solid #ff018000;
+  box-shadow: 0px 10px 36px 0px #0000001A, 2rem 1000rem 1px #fff inset;
+  transition: .2s ease;
+  z-index: 1;
+  border: solid 1px transparent;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  min-height: 460rem;
+  min-width: 416rem;
+  max-width: 464rem;
+}
+
+.card-news .card-image{
+  width: 100%;
+  height: 200rem;
+  background-color: #251b5940;
+  overflow: hidden;
+}
+
+.card-news .card-image img{
+  background-color: #fff;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  min-height: 100%;
+}
+
+.card-news .card-content{
+  padding: 40rem;
+  padding-bottom: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16rem;;
+  position: absolute;
+  min-height: 220rem;
+  bottom: 0;
+  background-color: var(--white);
+  transition: .2s ease;
+}
+
+.card-news .card-content .chips-block{
+  display: flex;
+  gap: 16rem;
+}
+
+.card-news .card-content .chips-block .chip{
+  padding: 7rem 21rem;
+  border-radius: 6rem;
+  font: var(--font-xs);
+  border: 1px solid var(--red);
+  color: var(--red);
+}
+
+.card-news .card-content .chips-block .chip:last-child{
+  border: 1px solid var(--violet);
+  color: var(--violet);
+}
+
+.card-news .card-content .title{
+  font: var(--font-2xl-130);
+  font-weight: 700;
+  color: #251B59;
+}
+
+.card-news .card-content .description{
+  color: #716785;
+  font: var(--font-m-lato);
+  display: block;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.card-news .card-content .button-cta-icon{
+  opacity: 0;
+  width: fit-content;
+  transition: .2s ease;
+  position: absolute;
+  bottom: 40rem;
+}
+
+.card-news:hover {
+  cursor: pointer;
+  scale: 1.01;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), var(--gradient-3);
+}
+
+.card-news:hover .button-cta-icon {
+  opacity: 1;
+}
+
+.card-news:hover .card-content{
+  min-height: 240rem;
+  padding-bottom: 80rem;
+}

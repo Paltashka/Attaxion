@@ -1,0 +1,122 @@
+.slider{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.slider .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.slider .left .title {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  color: var(--deep-blue);
+  font: var(--font-m-medium);
+}
+
+.slider .left .dots {
+  display: flex;
+  gap: 14rem;
+}
+
+.slider .left .dots div{
+  width: 8rem;
+  height: 8rem;
+  background-color:#9688b1;
+  border-radius: 100%;
+}
+
+.slider .left .dots div.active{
+  background-color: #7878ff;
+}
+
+.slider .left .title .icon{ 
+  height: 24rem;
+  width: 24rem;
+}
+
+.slider .right{
+  width: 66%;
+  position: relative;
+}
+
+.slider .right .slider-content-item{
+  display: none;
+  flex-direction: column;
+  gap: 48rem;
+}
+
+.slider .right .slider-content-item.active{ 
+  display: flex;
+}
+
+.slider .right .slider-content-item.active .top, .slider .right .slider-content-item.active .author{  animation: contentAnimation 1s ease;} 
+
+.slider .right::before{
+  content: url('');
+  background-image: url('../../assets/icons/double-quotes.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--red);
+  height: 48rem;
+  width: 48rem;
+  position: absolute;
+  right: calc(100% + 32rem);
+  display: block;
+}
+
+.slider .right .top {
+  color: #251B59;
+  padding-bottom: 48rem;
+  min-height: 300rem;
+  border-bottom: 1px solid #B5AEC1;
+}
+
+.slider .right .bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: var(--font-m-lato);
+}
+
+.slider .right .bottom .author{
+  display: flex;
+  align-items: center;
+  gap: 16rem;
+  color: var(--deep-blue);
+}
+
+.slider .right .bottom .author::before{
+  content: '';
+  display: block;
+  width: 24rem;
+  height: 1.5rem;
+  background-color:#251B59;
+}
+
+.slider .right .controls{
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 3rem;
+  align-items: center;
+  gap: 40rem;
+}
+
+.slider .right .controls button svg{
+  width: 25rem;
+  height: 8rem;
+  transition: .2s ease;
+  fill: #251B59;
+}
+
+.slider .right .controls button:hover svg {
+  fill: var(--red);
+}
+.slider .right .controls button:first-child svg{
+  transform: rotateZ(180deg);
+}

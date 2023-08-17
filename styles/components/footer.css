@@ -71,7 +71,7 @@ footer .grid-item{
   transition: all 0.3s ease;
 }
 
-#footer-signup-input:focus#footer-signup-input::placeholder, #footer-signup-input:focus#footer-signup-input {
+#footer-signup-input:focus#footer-signup-input {
   color: var(--blue);
 }
 
