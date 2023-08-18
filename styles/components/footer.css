@@ -2,9 +2,10 @@ footer {
   display: grid; 
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 1fr 60rem;
-  /* gap: 1rem; */
   background-color: #716785;
+  overflow: hidden;
   height: 731rem;
+  border-radius: 20rem 20rem 0 0;
   grid-template-areas: 
     "footer-info1 footer-nav1 footer-nav1"
     "footer-info2 footer-nav2 footer-nav2"

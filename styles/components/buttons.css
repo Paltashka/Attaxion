@@ -68,7 +68,7 @@ button, .button {
   color: var(--light-violet);
 }
 
-.button-cta-icon .arrow-icon {
+.button-cta-icon .arrow-icon, .button-cta-icon .tap-icon {
   width: 24rem;
   height: 24rem;
   color: var(--yellow);

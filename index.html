@@ -27,30 +27,202 @@
     </div>
     <div class="header-bottom">
       <a href="/"><img class="logo" alt="Attaxion Logo" src="assets/icons/logo.svg" alt="Attaxion logo" /></a>
-      <nav>
-        <ul>
-          <li>
-            <span>Products</span>
-            <div>
-              <img src="assets/icons/dropdown.svg" alt="dropdown-icon">
+      <nav class="header-navigation-block">
+        <ul class="header-navigation">
+          <li class="header-navigation-item">
+            <div class="header-navigation-item-title-block">
+              <span class="header-navigation-item-title">Products</span>
+              <img class="icon" src="assets/icons/dropdown.svg" alt="dropdown-icon">
+              <!-- <img class="icon-hover" src="assets/icons/dropdown.svg" alt="dropdown-icon"> -->
+            </div>
+            <div class="submenu">
+              <div class="left">
+                <ul class="submenu-navigation">
+                  <li class="submenu-navigation-item">
+                    <div class="title">
+                      <img src="assets/icons/product-capabilities.svg" alt="Product capablilities icon">
+                      <span>Product capablilities</span>
+                    </div>
+                    <ul class="submenu-links">
+                      <li class="submenu-links-item"><a href="/capabilities/attack-surface-discovery">Attack Surface
+                          Discover</a></li>
+                      <li class="submenu-links-item"><a href="/capabilities/automated-remediation">Automated
+                          Remedation</a></li>
+                      <li class="submenu-links-item"><a href="/capabilities/vulnerability-prioritization">Vulnerability
+                          Prioritization</a></li>
+                      <li class="submenu-links-item"><a href="/capabilities/continuous-monitoring">Continious
+                          Monitoring</a></li>
+                    </ul>
+                  </li>
+                  <li class="submenu-navigation-item">
+                    <div class="title">
+                      <img src="assets/icons/integrations.svg" alt="Product capablilities icon">
+                      <span>Integrations</span>
+                    </div>
+                    <ul class="submenu-links">
+                      <li class="submenu-links-item"><a href="/integrations/threat-intelligence-apis">Threat
+                          Intelligance APIs</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="right">
+                <div class="right-content">
+                  <div class="card">
+                    <picture class="card-image">
+                      <!-- <source srcset="assets/images/featured-2.webp" media="(min-width: 1200px)"> -->
+                      <img src="assets/images/featured-2.webp"></img>
+                    </picture>
+                  </div>
+                  <a href="#" class="button button-cta-icon">
+                    <span>Request Your Custom Attack Surface Report Today</span>
+                    <img src="assets/icons/button-arrow.svg" class="arrow-icon"></img>
+                  </a>
+                </div>
+              </div>
             </div>
           </li>
-          <li>
-            <span>Solutions</span>
-            <div>
-              <img src="assets/icons/dropdown.svg" alt="dropdown-icon">
+          <li class="header-navigation-item">
+            <div class="header-navigation-item-title-block">
+              <span class="header-navigation-item-title">Solutions</span>
+              <img class="icon" src="assets/icons/dropdown.svg" alt="dropdown-icon">
+              <!-- <img class="icon-hover" src="assets/icons/dropdown.svg" alt="dropdown-icon"> -->
+            </div>
+
+            <div class="submenu">
+              <div class="left">
+                <ul class="submenu-navigation">
+                  <li class="submenu-navigation-item">
+                    <div class="title">
+                      <img src="assets/icons/by-use-case.svg" alt="Product capablilities icon">
+                      <span>By use case</span>
+                    </div>
+                    <ul class="submenu-links">
+                      <li class="submenu-links-item"><a href="/use-case/reduce-attack-surface">Reduce your external
+                          attack surface</a></li>
+                      <li class="submenu-links-item"><a href="/use-case/manage-your-threat-exposure">Manage your threat
+                          exposure</a></li>
+                      <li class="submenu-links-item"><a href="/use-case/shadow-it-visibility">Enhance shadow it
+                          visibility</a></li>
+                      <li class="submenu-links-item"><a href="/use-case/assess-mergers-and-acquisitions-risks">Assess
+                          mergers and acquisitions risks</a></li>
+                    </ul>
+                  </li>
+                  <li class="submenu-navigation-item">
+                    <div class="title">
+                      <img src="assets/icons/by-industry.svg" alt="Product capablilities icon">
+                      <span>By industry</span>
+                    </div>
+                    <ul class="submenu-links">
+                      <li class="submenu-links-item"><a href="/industry/financial-services">Financial Services</a></li>
+                      <li class="submenu-links-item"><a href="#">Healthcare Providers</a></li>
+                      <li class="submenu-links-item"><a href="/industry/online-marketplaces">Online Marketplaces</a>
+                      </li>
+                      <li class="submenu-links-item"><a href="/industry/government-entities">Government Entities</a>
+                      </li>
+                      <li class="submenu-links-item"><a href="/industry/it-saas-vendors">IT and SaaS Vendors</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="right">
+                <div class="right-content">
+                  <div class="card">
+                    <div class="card-review">
+                      <p class="review">
+                        Attaxion allowed us to see how vulnerable we were. The platform quickly showed us assets that
+                        have been swept under the rug for years. It also provided very detailed context on how the
+                        assets pointed back to us.
+                      </p>
+                      <div class="author">Director of Information Security at a SaaS Company</div>
+                    </div>
+                  </div>
+                  <a href="#" class="button button-cta-icon">
+                    <img src="assets/icons/tap.svg" class="tap-icon" alt="tap icon"></img>
+                    <span>Read more reviews</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li class="header-navigation-item">
+            <div class="header-navigation-item-title-block">
+              <span class="header-navigation-item-title">Resources</span>
+              <img class="icon" src="assets/icons/dropdown.svg" alt="dropdown-icon">
+              <!-- <img class="icon-hover" src="assets/icons/dropdown.svg" alt="dropdown-icon"> -->
+            </div>
+
+            <div class="submenu">
+              <div class="left">
+                <ul class="submenu-navigation">
+                  <li class="submenu-navigation-item">
+                    <div class="title">
+                      <img src="assets/icons/by-use-case.svg" alt="Product capablilities icon">
+                      <span>Resources</span>
+                    </div>
+                    <ul class="submenu-links">
+                      <li class="submenu-links-item"><a href="/blog">Blog</a></li>
+                      <li class="submenu-links-item"><a href="/glossary">Glossary</a></li>
+                      <li class="submenu-links-item"><a href="/learning-hub">Learning Hub</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="right">
+                <div class="right-content">
+                  <div class="card">
+                    <div class="card-news sm">
+                      <picture class="card-image">
+                        <source srcset="assets/images/featured-2.webp" media="(min-width: 1200px)">
+                        <img src="assets/images/featured-2.webp"></img>
+                      </picture>
+                      <div class="card-content">
+                        <div class="chips-block">
+                          <div class="chip">Business</div>
+                          <div class="chip">Analytics</div>
+                        </div>
+                        <p class="title">Time-tracking Dos and Don’ts</p>
+                        <p class="description">Vel nihil cumque quos dolorem culpa. Deleniti officiis et et quisquam
+                          voluptas.
+                          Asperiores error eum saepe qui omnis at velit […]</p>
+                        <a href="#" class="button button-cta-icon">
+                          <span>Learn more</span>
+                          <img src="assets/icons/button-arrow.svg" class="arrow-icon"></img>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" class="button button-cta-icon">
+                    <img src="assets/icons/tap.svg" class="tap-icon" alt="tap icon"></img>
+                    <span>Read more reviews</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </li>
-          <li>
-            <span>Resources</span>
-            <div>
-              <img src="assets/icons/dropdown.svg" alt="dropdown-icon">
+          <li class="header-navigation-item">
+            <div class="header-navigation-item-title-block">
+              <span class="header-navigation-item-title">Company</span>
+              <img class="icon" src="assets/icons/dropdown.svg" alt="dropdown-icon">
+              <!-- <img class="icon-hover" src="assets/icons/dropdown.svg" alt="dropdown-icon"> -->
             </div>
-          </li>
-          <li>
-            <span>Company</span>
-            <div>
-              <img src="assets/icons/dropdown.svg" alt="dropdown-icon">
+            <div class="submenu">
+              <div class="left">
+                <ul class="submenu-navigation">
+                  <li class="submenu-navigation-item">
+                    <div class="title">
+                      <img src="assets/icons/by-use-case.svg" alt="Product capablilities icon">
+                      <span>Company</span>
+                    </div>
+                    <ul class="submenu-links">
+                      <li class="submenu-links-item"><a href="#">About</a></li>
+                      <li class="submenu-links-item"><a href="#">Contact us</a></li>
+                      <li class="submenu-links-item"><a href="#">Careers</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
           </li>
         </ul>
@@ -402,7 +574,7 @@
           <div class="buttons">
             <a href="#" class="button button-cta-gradient">Start Free Trial</a>
             <a href="#" class="button button-cta-icon">
-              <span>Learn more </span>
+              <span>Learn more</span>
               <img src="assets/icons/button-arrow.svg" class="arrow-icon"></img>
             </a>
           </div>
@@ -418,7 +590,7 @@
     <section id="homepage-s8">
       <h3>Featured Resources</h3>
       <div class="resources-list">
-        <div class="card-news">
+        <div class="card-news lg">
           <picture class="card-image">
             <!-- <source srcset="assets/images/featured-1.webp" media="(min-width: 1200px)"> -->
             <img src="assets/images/featured-1.webp"></img>
@@ -431,12 +603,13 @@
             <p class="title">Support During the Exponential Growth</p>
             <p class="description">Vel nihil cumque quos dolorem culpa. Deleniti officiis et et quisquam voluptas.
               Asperiores error eum saepe qui omnis at velit […]</p>
-            <a href="#" class="button button-cta-icon">Learn more
+            <a href="#" class="button button-cta-icon">
+              <span>Learn more</span>
               <img src="assets/icons/button-arrow.svg" class="arrow-icon"></img>
             </a>
           </div>
         </div>
-        <div class="card-news">
+        <div class="card-news lg">
           <picture class="card-image">
             <!-- <source srcset="assets/images/featured-2.webp" media="(min-width: 1200px)"> -->
             <img src="assets/images/featured-2.webp"></img>
@@ -449,12 +622,13 @@
             <p class="title">Time-tracking Dos and Don’ts</p>
             <p class="description">Vel nihil cumque quos dolorem culpa. Deleniti officiis et et quisquam voluptas.
               Asperiores error eum saepe qui omnis at velit […]</p>
-            <a href="#" class="button button-cta-icon">Learn more
+            <a href="#" class="button button-cta-icon">
+              <span>Learn more</span>
               <img src="assets/icons/button-arrow.svg" class="arrow-icon"></img>
             </a>
           </div>
         </div>
-        <div class="card-news">
+        <div class="card-news lg">
           <picture class="card-image">
             <!-- <source srcset="assets/images/featured-3.webp" media="(min-width: 1200px)"> -->
             <img src="assets/images/featured-3.webp"></img>
@@ -467,7 +641,8 @@
             <p class="title">The Importance of Making Content</p>
             <p class="description">Vel nihil cumque quos dolorem culpa. Deleniti officiis et et quisquam voluptas.
               Asperiores error eum saepe qui omnis at velit […]</p>
-            <a href="#" class="button button-cta-icon">Learn more
+            <a href="#" class="button button-cta-icon">
+              <span>Learn more</span>
               <img src="assets/icons/button-arrow.svg" class="arrow-icon"></img>
             </a>
           </div>
@@ -575,8 +750,11 @@
     </div>
   </footer>
 
+  <div class="header-overlay"></div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="./scripts/main.js"></script>
   <script src="./scripts/slider.js"></script>
   <script src="./scripts/home.js"></script>
 </body>

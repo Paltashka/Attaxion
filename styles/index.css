@@ -32,6 +32,20 @@ section {
   overflow: hidden;
 }
 
+.header-overlay {
+  position: fixed;
+  display: none;
+  opacity: 0;
+  width: 100%;
+  min-height: 100vh;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: 9;
+  background-color: rgba(14, 4, 45, 0.7);
+}
+
 .bg-glass {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
