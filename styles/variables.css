@@ -10,6 +10,14 @@
   --font-h5: 700 40rem / 140% var(--font-family-primary);
   --font-h6: 400 28rem / 160% var(--font-family-primary);
 
+
+  --font-h1-mob: 700 40rem / 120% var(--font-family-primary);
+  --font-h2-mob: 700 72rem / 120% var(--font-family-primary);
+  --font-h3-mob: 700 38rem / 130% var(--font-family-primary);
+  --font-h4-mob: 700 48rem / 140% var(--font-family-primary);
+  --font-h5-mob: 700 40rem / 140% var(--font-family-primary);
+  --font-h6-mob: 400 24rem / 160% var(--font-family-primary);
+
   /* BODY */
   --font-xl-700: 700 24rem / 130% var(--font-family-primary);
   --font-xl-600: 600 24rem / 100% var(--font-family-primary);
@@ -32,6 +40,30 @@
   --font-tiny-600: 600 12rem / 100% var(--font-family-primary);
 
   --font-xs-400: 400 8rem / 100% var(--font-family-primary);
+
+
+
+  --font-xl-700-mob: 700 22rem / 130% var(--font-family-primary);
+  --font-xl-600-mob: 600 22rem / 100% var(--font-family-primary);
+  
+  --font-l-600-mob: 600 20rem / 100% var(--font-family-primary);
+
+  --font-m-700-mob: 700 18rem / 130% var(--font-family-primary);
+  --font-m-600-mob: 600 16rem / 100% var(--font-family-primary);
+  --font-m-400-mob: 400 16rem / 160% var(--font-family-secondary);
+
+  --font-regular-500-mob: 500 16rem / 100% var(--font-family-primary);
+  --font-regular-400-mob: 400 16rem / 100% var(--font-family-primary);
+  --font-regular-400-lato-mob: 400 16rem / 160% var(--font-family-secondary);
+
+  --font-s-400-mob: 400 14rem / 100% var(--font-family-secondary);
+  --font-s-400-140-mob: 400 14rem / 140% var(--font-family-secondary);
+  --font-s-400-160-mob: 400 14rem / 160% var(--font-family-secondary);
+
+  --font-tiny-400-mob: 400 12rem / 100% var(--font-family-primary);
+  --font-tiny-600-mob: 600 12rem / 100% var(--font-family-primary);
+
+  --font-xs-400-mob: 400 8rem / 100% var(--font-family-primary);
 
 
   /* OTHER */
