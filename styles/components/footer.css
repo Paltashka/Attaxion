@@ -42,7 +42,7 @@ footer .grid-item{
 
 .footer-info1 .input-block{
   display: flex;
-  font: var(--font-m-lato);
+  font: var(--font-regular-400-lato);
   flex-direction: column;
   gap: 8rem;
   position: relative;
@@ -51,7 +51,7 @@ footer .grid-item{
 .footer-info1 .input-block #footer-signup-input{
   outline: none;
   border: none;
-  font: var(--font-s);
+  font: var(--font-s-400);
   color: #B5AEC1;
   background: transparent;
   border-bottom: 1rem solid #716785;
@@ -102,7 +102,7 @@ footer .grid-item{
   display: flex;
   align-items: center;
   padding-left: 64rem;
-  font: var(--font-m);
+  font: var(--font-regular-400);
   grid-area: footer-info2;
   border-right: 1rem solid #716785;
 }
@@ -134,7 +134,7 @@ footer .grid-item{
 }
 
 .footer-list .list-title{
-  font: var(--font-l-sb);
+  font: var(--font-m-600);
 }
 
 .footer-list ul{
@@ -146,7 +146,7 @@ footer .grid-item{
 
 .footer-list .list-item a, .footer-list .list-item{
   color: #B5AEC1;
-  font: var(--font-s-160);
+  font: var(--font-s-400-160);
   transition: .2s ease;
 }
 
@@ -159,7 +159,7 @@ footer .grid-item{
   justify-content: space-between;
   align-items: center;
   grid-area: footer-bottom;
-  font: var(--font-xs); 
+  font: var(--font-tiny-400); 
   padding: 0 64rem;
   border-top: 1rem solid #716785;
 }

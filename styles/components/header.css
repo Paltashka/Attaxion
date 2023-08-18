@@ -18,7 +18,7 @@ header.active{
   align-items: center;
   padding: 14rem 0;
   gap: 127rem;
-  font: var(--font-xs);
+  font: var(--font-tiny-400);
   color: var(--white);
   text-transform: uppercase;
   background-color: #251B59;
@@ -44,7 +44,7 @@ header.active{
   padding: 0 63.5rem;
   height: 60rem;
   color: var(--white);
-  font: var(--font-s);
+  font: var(--font-s-400);
 }
 
 .header-bottom .logo {
@@ -208,7 +208,7 @@ header.active{
   align-items: center;
   gap: 16rem;
   color: var(--deep-blue);
-  font: var(--font-l-sb);
+  font: var(--font-m-600);
 }
 
 .submenu-navigation-item .title img{
@@ -223,7 +223,7 @@ header.active{
 }
 
 .submenu-navigation-item .submenu-links .submenu-links-item a{
-  font: var(--font-l-lato);
+  font: var(--font-m-400);
   color: var(--deep-blue);
   transition: .2s ease;
 }

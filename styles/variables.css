@@ -11,26 +11,27 @@
   --font-h6: 400 28rem / 160% var(--font-family-primary);
 
   /* BODY */
-  --font-2xl-130: 700 24rem / 130% var(--font-family-primary);
-  --font-2xl: 600 24rem / 100% var(--font-family-primary);
+  --font-xl-700: 700 24rem / 130% var(--font-family-primary);
+  --font-xl-600: 600 24rem / 100% var(--font-family-primary);
   
-  --font-xl: 600 20rem / 100% var(--font-family-primary);
+  --font-l-600: 600 20rem / 100% var(--font-family-primary);
 
-  --font-l: 700 18rem / 130% var(--font-family-primary);
-  --font-l-sb: 600 18rem / 100% var(--font-family-primary);
-  --font-l-lato: 400 18rem / 160% var(--font-family-secondary);
+  --font-m-700: 700 18rem / 130% var(--font-family-primary);
+  --font-m-600: 600 18rem / 100% var(--font-family-primary);
+  --font-m-400: 400 18rem / 160% var(--font-family-secondary);
 
-  --font-m: 400 16rem / 100% var(--font-family-primary);
-  --font-m-medium: 500 16rem / 100% var(--font-family-primary);
-  --font-m-lato: 400 16rem / 160% var(--font-family-secondary);
-  
+  --font-regular-500: 500 16rem / 100% var(--font-family-primary);
+  --font-regular-400: 400 16rem / 100% var(--font-family-primary);
+  --font-regular-400-lato: 400 16rem / 160% var(--font-family-secondary);
 
-  --font-s: 400 14rem / 100% var(--font-family-secondary);
-  --font-s-140: 400 14rem / 140% var(--font-family-secondary);
-  --font-s-160: 400 14rem / 160% var(--font-family-secondary);
+  --font-s-400: 400 14rem / 100% var(--font-family-secondary);
+  --font-s-400-140: 400 14rem / 140% var(--font-family-secondary);
+  --font-s-400-160: 400 14rem / 160% var(--font-family-secondary);
 
-  --font-xs: 400 12rem / 100% var(--font-family-primary);
-  --font-2xs: 400 8rem / 100% var(--font-family-primary);
+  --font-tiny-400: 400 12rem / 100% var(--font-family-primary);
+  --font-tiny-600: 600 12rem / 100% var(--font-family-primary);
+
+  --font-xs-400: 400 8rem / 100% var(--font-family-primary);
 
 
   /* OTHER */

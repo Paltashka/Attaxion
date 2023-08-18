@@ -35,13 +35,13 @@
 }
 
 .card-solutions .card-title{
-  font: var(--font-l);
+  font: var(--font-m-700);
   margin-top: 24rem;
   margin-bottom: 16rem;
 }
 
 .card-solutions .card-description{
-  font: var(--font-s-140);
+  font: var(--font-s-400-140);
   color: #B5AEC1;
 }
 
@@ -135,7 +135,7 @@
 .card-news .card-content .chips-block .chip{
   padding: 7rem 21rem;
   border-radius: 6rem;
-  font: var(--font-xs);
+  font: var(--font-tiny-400);
   border: 1px solid var(--red);
   color: var(--red);
 }
@@ -146,14 +146,14 @@
 }
 
 .card-news .card-content .title{
-  font: var(--font-2xl-130);
+  font: var(--font-xl-700);
   font-weight: 700;
   color: #251B59;
 }
 
 .card-news .card-content .description{
   color: #716785;
-  font: var(--font-m-lato);
+  font: var(--font-regular-400-lato);
   display: block;
   display: -webkit-box;
   overflow: hidden;
@@ -211,7 +211,7 @@
 }
 
 .card-review .review {
-  font: var(--font-l-lato);
+  font: var(--font-m-400);
   font-weight: normal;
   color: var(--deep-blue);
 }
@@ -221,7 +221,7 @@
   position: relative;
   align-items: center;
   gap: 16rem;
-  font: var(--font-m-lato);
+  font: var(--font-regular-400-lato);
   color: var(--violet);
 }
 

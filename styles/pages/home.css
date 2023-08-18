@@ -157,7 +157,7 @@
   display: flex;
   align-items: center;
   gap: 10rem;
-  font: var(--font-m);
+  font: var(--font-regular-400);
 }
 
 #homepage-s1 .title-block .subtitle .icon{
@@ -172,7 +172,7 @@
 
 #homepage-s1 .title-block .description {
   color: #B5AEC1;
-  font: var(--font-m-lato);
+  font: var(--font-regular-400-lato);
   margin-top: 32rem;
   padding: 0 110rem;
 }
@@ -315,7 +315,7 @@
   width: 100%;
   border: 1rem solid var(--violet);
   border-radius: 20rem;
-  font: var(--font-m-medium);
+  font: var(--font-regular-500);
   padding: 38rem 95rem;
 } 
 
@@ -366,7 +366,7 @@
 }
 
 #homepage-s2 .text-content p{
-  font: var(--font-m-lato);
+  font: var(--font-regular-400-lato);
   max-width: 80%;
   padding: 48rem 0 56rem 0;
 }
@@ -419,7 +419,7 @@
 }
 
 #homepage-s3 span{
-  font: var(--font-l-sb);
+  font: var(--font-m-600);
   color: var(--violet);
 }
 
@@ -465,7 +465,7 @@
 }
 
 #homepage-s4 .card p{
-  font: var(--font-m-lato);
+  font: var(--font-regular-400-lato);
   color: #B5AEC1;
 }
 
@@ -522,7 +522,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   width: 304rem;
-  font: var(--font-m);
+  font: var(--font-regular-400);
 }
 
 #homepage-s5 .title-block .toggle-menu span {
@@ -660,7 +660,7 @@
 }
 
 #homepage-s7 .card .text-content .description{
-  font: var(--font-m-lato); 
+  font: var(--font-regular-400-lato); 
   color: #B5AEC1; 
 }
 

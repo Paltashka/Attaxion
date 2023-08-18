@@ -16,7 +16,7 @@
   align-items: center;
   gap: 10rem;
   color: var(--deep-blue);
-  font: var(--font-m-medium);
+  font: var(--font-regular-500);
 }
 
 .slider .left .dots {
@@ -81,7 +81,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font: var(--font-m-lato);
+  font: var(--font-regular-400-lato);
 }
 
 .slider .right .bottom .author{
