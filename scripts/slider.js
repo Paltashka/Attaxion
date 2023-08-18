@@ -35,7 +35,7 @@ const Slider = (function () {
 
   const showPreviousSlide = (sliderContent, sliderDotsContent) => {
     let currentContentActiveIndex = 0;
-    let currnetDotIndex = 0;
+    let currentDotIndex = 0;
 
     for (let index = 0; index < sliderContent.length; index++) {
       const item = sliderContent[index];
@@ -47,7 +47,7 @@ const Slider = (function () {
     for (let index = 0; index < sliderDotsContent.length; index++) {
       const item = sliderDotsContent[index];
       if (item.className.includes('active')) {
-        currnetDotIndex = index;
+        currentDotIndex = index;
       }
     }
 
@@ -55,8 +55,8 @@ const Slider = (function () {
       return true;
     }
 
-    sliderDotsContent[currnetDotIndex].classList.remove('active');
-    sliderDotsContent[currnetDotIndex - 1].classList.add('active');
+    sliderDotsContent[currentDotIndex].classList.remove('active');
+    sliderDotsContent[currentDotIndex - 1].classList.add('active');
 
     fadeOutAnimation(sliderContent[currentContentActiveIndex]);
     sliderContent[currentContentActiveIndex].classList.remove('active');
@@ -67,7 +67,7 @@ const Slider = (function () {
 
   const showNextSlide = (sliderContent, sliderDotsContent) => {
     let currentContentActiveIndex = 0;
-    let currnetDotIndex = 0;
+    let currentDotIndex = 0;
 
     for (let index = 0; index < sliderContent.length; index++) {
       const item = sliderContent[index];
@@ -79,7 +79,7 @@ const Slider = (function () {
     for (let index = 0; index < sliderDotsContent.length; index++) {
       const item = sliderDotsContent[index];
       if (item.className.includes('active')) {
-        currnetDotIndex = index;
+        currentDotIndex = index;
       }
     }
 
@@ -87,8 +87,8 @@ const Slider = (function () {
       return true;
     }
 
-    sliderDotsContent[currnetDotIndex].classList.remove('active');
-    sliderDotsContent[currnetDotIndex + 1].classList.add('active');
+    sliderDotsContent[currentDotIndex].classList.remove('active');
+    sliderDotsContent[currentDotIndex + 1].classList.add('active');
 
     fadeOutAnimation(sliderContent[currentContentActiveIndex]);
     sliderContent[currentContentActiveIndex].classList.remove('active');

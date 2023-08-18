@@ -32,7 +32,7 @@ var Slider = function () {
 
   var showPreviousSlide = function showPreviousSlide(sliderContent, sliderDotsContent) {
     var currentContentActiveIndex = 0;
-    var currnetDotIndex = 0;
+    var currentDotIndex = 0;
 
     for (var index = 0; index < sliderContent.length; index++) {
       var item = sliderContent[index];
@@ -46,7 +46,7 @@ var Slider = function () {
       var _item = sliderDotsContent[_index];
 
       if (_item.className.includes('active')) {
-        currnetDotIndex = _index;
+        currentDotIndex = _index;
       }
     }
 
@@ -54,8 +54,8 @@ var Slider = function () {
       return true;
     }
 
-    sliderDotsContent[currnetDotIndex].classList.remove('active');
-    sliderDotsContent[currnetDotIndex - 1].classList.add('active');
+    sliderDotsContent[currentDotIndex].classList.remove('active');
+    sliderDotsContent[currentDotIndex - 1].classList.add('active');
     fadeOutAnimation(sliderContent[currentContentActiveIndex]);
     sliderContent[currentContentActiveIndex].classList.remove('active');
     fadeInAnimation(sliderContent[currentContentActiveIndex - 1]);
@@ -64,7 +64,7 @@ var Slider = function () {
 
   var showNextSlide = function showNextSlide(sliderContent, sliderDotsContent) {
     var currentContentActiveIndex = 0;
-    var currnetDotIndex = 0;
+    var currentDotIndex = 0;
 
     for (var index = 0; index < sliderContent.length; index++) {
       var item = sliderContent[index];
@@ -78,7 +78,7 @@ var Slider = function () {
       var _item2 = sliderDotsContent[_index2];
 
       if (_item2.className.includes('active')) {
-        currnetDotIndex = _index2;
+        currentDotIndex = _index2;
       }
     }
 
@@ -86,8 +86,8 @@ var Slider = function () {
       return true;
     }
 
-    sliderDotsContent[currnetDotIndex].classList.remove('active');
-    sliderDotsContent[currnetDotIndex + 1].classList.add('active');
+    sliderDotsContent[currentDotIndex].classList.remove('active');
+    sliderDotsContent[currentDotIndex + 1].classList.add('active');
     fadeOutAnimation(sliderContent[currentContentActiveIndex]);
     sliderContent[currentContentActiveIndex].classList.remove('active');
     fadeInAnimation(sliderContent[currentContentActiveIndex + 1]);
