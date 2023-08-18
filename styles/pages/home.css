@@ -356,19 +356,6 @@
   display: flex;
 }
 
-#homepage-s2 .content-block-item.active .text-content {
-  animation: contentAnimation .9s ease;
-}
-
-@keyframes contentAnimation {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 #homepage-s2 .text-content {
   width: 80%;
 }
@@ -602,6 +589,7 @@
 #homepage-s5 .content-block {
   padding-left: 80rem; 
   padding-right: 48rem;
+  min-height: 300rem;
 }
 
 #homepage-s5 .content-block-item  {
@@ -619,7 +607,6 @@
 
 #homepage-s5 .content-block-item.active {
   display: flex;
-  animation: contentAnimation .9s ease;
 }
 
 #homepage-s6 {

@@ -33,14 +33,51 @@ toggleCheck.addEventListener('click', (e) => {
     `[data-s5-content="industry"]`
   );
   const usecaseContent = document.querySelector(`[data-s5-content="usecase"]`);
+  const timeline = gsap.timeline();
+
+  const fadeInAnimation = (item) => {
+    timeline.fromTo(
+      item,
+      {
+        display: 'none',
+        opacity: 0,
+      },
+      {
+        display: 'flex',
+        opacity: 1,
+        ease: 'ease',
+        duration: 0.1,
+      }
+    );
+  };
+
+  const fadeOutAnimation = (item) => {
+    timeline.fromTo(
+      item,
+      {
+        display: 'flex',
+        opacity: 1,
+      },
+      {
+        display: 'none',
+        opacity: 0,
+        ease: 'ease',
+        duration: 0.1,
+      }
+    );
+  };
 
   if (!toggleCheck.checked) {
+    fadeOutAnimation(industryContent);
     industryContent.classList.remove('active');
 
+    fadeInAnimation(usecaseContent);
     usecaseContent.classList.add('active');
   } else {
+    fadeOutAnimation(usecaseContent);
     usecaseContent.classList.remove('active');
 
+    fadeInAnimation(industryContent);
     industryContent.classList.add('active');
   }
 });

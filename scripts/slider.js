@@ -1,4 +1,38 @@
 const Slider = (function () {
+  const timeline = gsap.timeline();
+  const fadeInAnimation = (item) => {
+    timeline.fromTo(
+      item,
+      {
+        display: 'none',
+        opacity: 0,
+      },
+      {
+        display: 'flex',
+        opacity: 1,
+        ease: 'ease',
+        duration: 0.3,
+      }
+    );
+  };
+
+  const fadeOutAnimation = (item, onCompleteCallback) => {
+    timeline.fromTo(
+      item,
+      {
+        display: 'flex',
+        opacity: 1,
+      },
+      {
+        display: 'none',
+        opacity: 0,
+        ease: 'ease',
+        duration: 0.3,
+        onComplete: onCompleteCallback ? () => onCompleteCallback() : undefined,
+      }
+    );
+  };
+
   const showPreviousSlide = (sliderContent, sliderDotsContent) => {
     let currentContentActiveIndex = 0;
     let currnetDotIndex = 0;
@@ -24,7 +58,10 @@ const Slider = (function () {
     sliderDotsContent[currnetDotIndex].classList.remove('active');
     sliderDotsContent[currnetDotIndex - 1].classList.add('active');
 
+    fadeOutAnimation(sliderContent[currentContentActiveIndex]);
     sliderContent[currentContentActiveIndex].classList.remove('active');
+
+    fadeInAnimation(sliderContent[currentContentActiveIndex - 1]);
     sliderContent[currentContentActiveIndex - 1].classList.add('active');
   };
 
@@ -53,7 +90,10 @@ const Slider = (function () {
     sliderDotsContent[currnetDotIndex].classList.remove('active');
     sliderDotsContent[currnetDotIndex + 1].classList.add('active');
 
+    fadeOutAnimation(sliderContent[currentContentActiveIndex]);
     sliderContent[currentContentActiveIndex].classList.remove('active');
+
+    fadeInAnimation(sliderContent[currentContentActiveIndex + 1]);
     sliderContent[currentContentActiveIndex + 1].classList.add('active');
   };
 
@@ -69,6 +109,8 @@ const Slider = (function () {
     }
 
     sliderDotsContent[0].classList.add('active');
+
+    fadeInAnimation(sliderContent[0]);
     sliderContent[0].classList.add('active');
   };
 
@@ -88,7 +130,6 @@ const Slider = (function () {
           .getElementsByClassName('left')[0]
           .getElementsByClassName('dots')[0];
 
-        console.log(sliderDots, 'sldd');
         for (let index = 0; index < this.sliderContent.length; index++) {
           if (index === 0) {
             sliderDots.innerHTML += '<div class="slider-dots active"></div>';
@@ -101,10 +142,13 @@ const Slider = (function () {
 
     this.sliderDotsContent = slider.getElementsByClassName('slider-dots');
 
-    let slideShow = setInterval(() => {
+    let slideShow = setInterval(async () => {
       const isEnd = showNextSlide(this.sliderContent, this.sliderDotsContent);
       if (isEnd) {
-        setSliderStartValues(this.sliderContent, this.sliderDotsContent);
+        fadeOutAnimation(
+          this.sliderContent[this.sliderContent.length - 1],
+          () => setSliderStartValues(this.sliderContent, this.sliderDotsContent)
+        );
       }
     }, 3000);
 

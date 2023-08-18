@@ -1,6 +1,35 @@
 "use strict";
 
 var Slider = function () {
+  var timeline = gsap.timeline();
+
+  var fadeInAnimation = function fadeInAnimation(item) {
+    timeline.fromTo(item, {
+      display: 'none',
+      opacity: 0
+    }, {
+      display: 'flex',
+      opacity: 1,
+      ease: 'ease',
+      duration: 0.3
+    });
+  };
+
+  var fadeOutAnimation = function fadeOutAnimation(item, onCompleteCallback) {
+    timeline.fromTo(item, {
+      display: 'flex',
+      opacity: 1
+    }, {
+      display: 'none',
+      opacity: 0,
+      ease: 'ease',
+      duration: 0.3,
+      onComplete: onCompleteCallback ? function () {
+        return onCompleteCallback();
+      } : undefined
+    });
+  };
+
   var showPreviousSlide = function showPreviousSlide(sliderContent, sliderDotsContent) {
     var currentContentActiveIndex = 0;
     var currnetDotIndex = 0;
@@ -27,7 +56,9 @@ var Slider = function () {
 
     sliderDotsContent[currnetDotIndex].classList.remove('active');
     sliderDotsContent[currnetDotIndex - 1].classList.add('active');
+    fadeOutAnimation(sliderContent[currentContentActiveIndex]);
     sliderContent[currentContentActiveIndex].classList.remove('active');
+    fadeInAnimation(sliderContent[currentContentActiveIndex - 1]);
     sliderContent[currentContentActiveIndex - 1].classList.add('active');
   };
 
@@ -57,7 +88,9 @@ var Slider = function () {
 
     sliderDotsContent[currnetDotIndex].classList.remove('active');
     sliderDotsContent[currnetDotIndex + 1].classList.add('active');
+    fadeOutAnimation(sliderContent[currentContentActiveIndex]);
     sliderContent[currentContentActiveIndex].classList.remove('active');
+    fadeInAnimation(sliderContent[currentContentActiveIndex + 1]);
     sliderContent[currentContentActiveIndex + 1].classList.add('active');
   };
 
@@ -74,6 +107,7 @@ var Slider = function () {
     }
 
     sliderDotsContent[0].classList.add('active');
+    fadeInAnimation(sliderContent[0]);
     sliderContent[0].classList.add('active');
   };
 
@@ -89,7 +123,6 @@ var Slider = function () {
     var renderDots = // Render dots
     function (slider) {
       var sliderDots = slider.getElementsByClassName('left')[0].getElementsByClassName('dots')[0];
-      console.log(sliderDots, 'sldd');
 
       for (var index = 0; index < _this.sliderContent.length; index++) {
         if (index === 0) {
@@ -102,12 +135,26 @@ var Slider = function () {
     }(this.slider);
 
     this.sliderDotsContent = slider.getElementsByClassName('slider-dots');
-    var slideShow = setInterval(function () {
-      var isEnd = showNextSlide(_this.sliderContent, _this.sliderDotsContent);
+    var slideShow = setInterval(function _callee() {
+      var isEnd;
+      return regeneratorRuntime.async(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              isEnd = showNextSlide(_this.sliderContent, _this.sliderDotsContent);
 
-      if (isEnd) {
-        setSliderStartValues(_this.sliderContent, _this.sliderDotsContent);
-      }
+              if (isEnd) {
+                fadeOutAnimation(_this.sliderContent[_this.sliderContent.length - 1], function () {
+                  return setSliderStartValues(_this.sliderContent, _this.sliderDotsContent);
+                });
+              }
+
+            case 2:
+            case "end":
+              return _context.stop();
+          }
+        }
+      });
     }, 3000);
     this.previousButton.addEventListener('click', function () {
       clearInterval(slideShow);
