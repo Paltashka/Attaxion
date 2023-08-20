@@ -341,6 +341,7 @@
 
 #homepage-s2 .content-block {
   padding-left: 176rem;
+  min-height: 424rem;
   width: 100%;
 
 }

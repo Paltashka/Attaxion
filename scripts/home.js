@@ -2,6 +2,38 @@ window.onload = () => {
   document.body.className = '';
 };
 
+const fadeInAnimation = (timeline, item) => {
+  timeline.fromTo(
+    item,
+    {
+      display: 'none',
+      opacity: 0,
+    },
+    {
+      display: 'flex',
+      opacity: 1,
+      ease: 'ease',
+      duration: 0.1,
+    }
+  );
+};
+
+const fadeOutAnimation = (timeline, item) => {
+  timeline.fromTo(
+    item,
+    {
+      display: 'flex',
+      opacity: 1,
+    },
+    {
+      display: 'none',
+      opacity: 0,
+      ease: 'ease',
+      duration: 0.1,
+    }
+  );
+};
+
 const tabMenu = document.querySelector('.tab-menu');
 const contentBlock = document.getElementById('s2-content-block');
 
@@ -9,6 +41,8 @@ tabMenu.addEventListener('click', (e) => {
   if (e.target.className === 'tab-menu') {
     return;
   }
+
+  const timeline = gsap.timeline();
 
   for (const tab of tabMenu.children) {
     tab.classList.remove('active');
@@ -18,12 +52,16 @@ tabMenu.addEventListener('click', (e) => {
   const selectedTabName = e.target.dataset.s2TabName;
 
   for (const item of contentBlock.children) {
+    if (item.classList.contains('active')) {
+      fadeOutAnimation(timeline, item);
+    }
     item.classList.remove('active');
   }
 
   const contentToBeDisplayed = document.querySelector(
     `[data-s2-tab-content="${selectedTabName}"]`
   );
+  fadeInAnimation(timeline, contentToBeDisplayed);
   contentToBeDisplayed.classList.add('active');
 });
 
@@ -35,49 +73,17 @@ toggleCheck.addEventListener('click', (e) => {
   const usecaseContent = document.querySelector(`[data-s5-content="usecase"]`);
   const timeline = gsap.timeline();
 
-  const fadeInAnimation = (item) => {
-    timeline.fromTo(
-      item,
-      {
-        display: 'none',
-        opacity: 0,
-      },
-      {
-        display: 'flex',
-        opacity: 1,
-        ease: 'ease',
-        duration: 0.1,
-      }
-    );
-  };
-
-  const fadeOutAnimation = (item) => {
-    timeline.fromTo(
-      item,
-      {
-        display: 'flex',
-        opacity: 1,
-      },
-      {
-        display: 'none',
-        opacity: 0,
-        ease: 'ease',
-        duration: 0.1,
-      }
-    );
-  };
-
   if (!toggleCheck.checked) {
-    fadeOutAnimation(industryContent);
+    fadeOutAnimation(timeline, industryContent);
     industryContent.classList.remove('active');
 
-    fadeInAnimation(usecaseContent);
+    fadeInAnimation(timeline, usecaseContent);
     usecaseContent.classList.add('active');
   } else {
-    fadeOutAnimation(usecaseContent);
+    fadeOutAnimation(timeline, usecaseContent);
     usecaseContent.classList.remove('active');
 
-    fadeInAnimation(industryContent);
+    fadeInAnimation(timeline, industryContent);
     industryContent.classList.add('active');
   }
 });

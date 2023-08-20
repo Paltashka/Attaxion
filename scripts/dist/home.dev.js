@@ -4,6 +4,30 @@ window.onload = function () {
   document.body.className = '';
 };
 
+var fadeInAnimation = function fadeInAnimation(timeline, item) {
+  timeline.fromTo(item, {
+    display: 'none',
+    opacity: 0
+  }, {
+    display: 'flex',
+    opacity: 1,
+    ease: 'ease',
+    duration: 0.1
+  });
+};
+
+var fadeOutAnimation = function fadeOutAnimation(timeline, item) {
+  timeline.fromTo(item, {
+    display: 'flex',
+    opacity: 1
+  }, {
+    display: 'none',
+    opacity: 0,
+    ease: 'ease',
+    duration: 0.1
+  });
+};
+
 var tabMenu = document.querySelector('.tab-menu');
 var contentBlock = document.getElementById('s2-content-block');
 tabMenu.addEventListener('click', function (e) {
@@ -11,6 +35,7 @@ tabMenu.addEventListener('click', function (e) {
     return;
   }
 
+  var timeline = gsap.timeline();
   var _iteratorNormalCompletion = true;
   var _didIteratorError = false;
   var _iteratorError = undefined;
@@ -44,6 +69,11 @@ tabMenu.addEventListener('click', function (e) {
   try {
     for (var _iterator2 = contentBlock.children[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
       var item = _step2.value;
+
+      if (item.classList.contains('active')) {
+        fadeOutAnimation(timeline, item);
+      }
+
       item.classList.remove('active');
     }
   } catch (err) {
@@ -62,6 +92,7 @@ tabMenu.addEventListener('click', function (e) {
   }
 
   var contentToBeDisplayed = document.querySelector("[data-s2-tab-content=\"".concat(selectedTabName, "\"]"));
+  fadeInAnimation(timeline, contentToBeDisplayed);
   contentToBeDisplayed.classList.add('active');
 });
 var toggleCheck = document.getElementById('s5-toggle-check');
@@ -70,39 +101,15 @@ toggleCheck.addEventListener('click', function (e) {
   var usecaseContent = document.querySelector("[data-s5-content=\"usecase\"]");
   var timeline = gsap.timeline();
 
-  var fadeInAnimation = function fadeInAnimation(item) {
-    timeline.fromTo(item, {
-      display: 'none',
-      opacity: 0
-    }, {
-      display: 'flex',
-      opacity: 1,
-      ease: 'ease',
-      duration: 0.1
-    });
-  };
-
-  var fadeOutAnimation = function fadeOutAnimation(item) {
-    timeline.fromTo(item, {
-      display: 'flex',
-      opacity: 1
-    }, {
-      display: 'none',
-      opacity: 0,
-      ease: 'ease',
-      duration: 0.1
-    });
-  };
-
   if (!toggleCheck.checked) {
-    fadeOutAnimation(industryContent);
+    fadeOutAnimation(timeline, industryContent);
     industryContent.classList.remove('active');
-    fadeInAnimation(usecaseContent);
+    fadeInAnimation(timeline, usecaseContent);
     usecaseContent.classList.add('active');
   } else {
-    fadeOutAnimation(usecaseContent);
+    fadeOutAnimation(timeline, usecaseContent);
     usecaseContent.classList.remove('active');
-    fadeInAnimation(industryContent);
+    fadeInAnimation(timeline, industryContent);
     industryContent.classList.add('active');
   }
 });
