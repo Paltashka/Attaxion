@@ -1,5 +1,42 @@
 const Slider = (function () {
   const timeline = gsap.timeline();
+
+  const fadeInAnimationSwipe = (item, direction) => {
+    timeline.fromTo(
+      item,
+      {
+        display: 'none',
+        opacity: 0,
+        x: direction === 'left' ? 50 : -50,
+      },
+      {
+        display: 'flex',
+        opacity: 1,
+        ease: 'ease',
+        duration: 0.3,
+        x: 0,
+      }
+    );
+  };
+
+  const fadeOutAnimationSwipe = (item, direction) => {
+    timeline.fromTo(
+      item,
+      {
+        display: 'flex',
+        opacity: 1,
+        x: 0,
+      },
+      {
+        display: 'none',
+        opacity: 0,
+        ease: 'ease',
+        duration: 0.3,
+        x: direction === 'left' ? -50 : 50,
+      }
+    );
+  };
+
   const fadeInAnimation = (item) => {
     timeline.fromTo(
       item,
@@ -33,7 +70,11 @@ const Slider = (function () {
     );
   };
 
-  const showPreviousSlide = (sliderContent, sliderDotsContent) => {
+  const showPreviousSlide = (
+    sliderContent,
+    sliderDotsContent,
+    swipeDirection
+  ) => {
     let currentContentActiveIndex = 0;
     let currentDotIndex = 0;
 
@@ -58,14 +99,29 @@ const Slider = (function () {
     sliderDotsContent[currentDotIndex].classList.remove('active');
     sliderDotsContent[currentDotIndex - 1].classList.add('active');
 
-    fadeOutAnimation(sliderContent[currentContentActiveIndex]);
+    if (!swipeDirection) {
+      fadeOutAnimation(sliderContent[currentContentActiveIndex]);
+    } else {
+      fadeOutAnimationSwipe(
+        sliderContent[currentContentActiveIndex],
+        swipeDirection
+      );
+    }
+
     sliderContent[currentContentActiveIndex].classList.remove('active');
 
-    fadeInAnimation(sliderContent[currentContentActiveIndex - 1]);
+    if (!swipeDirection) {
+      fadeInAnimation(sliderContent[currentContentActiveIndex - 1]);
+    } else {
+      fadeInAnimationSwipe(
+        sliderContent[currentContentActiveIndex - 1],
+        swipeDirection
+      );
+    }
     sliderContent[currentContentActiveIndex - 1].classList.add('active');
   };
 
-  const showNextSlide = (sliderContent, sliderDotsContent) => {
+  const showNextSlide = (sliderContent, sliderDotsContent, swipeDirection) => {
     let currentContentActiveIndex = 0;
     let currentDotIndex = 0;
 
@@ -90,10 +146,24 @@ const Slider = (function () {
     sliderDotsContent[currentDotIndex].classList.remove('active');
     sliderDotsContent[currentDotIndex + 1].classList.add('active');
 
-    fadeOutAnimation(sliderContent[currentContentActiveIndex]);
+    if (!swipeDirection) {
+      fadeOutAnimation(sliderContent[currentContentActiveIndex]);
+    } else {
+      fadeOutAnimationSwipe(
+        sliderContent[currentContentActiveIndex],
+        swipeDirection
+      );
+    }
     sliderContent[currentContentActiveIndex].classList.remove('active');
 
-    fadeInAnimation(sliderContent[currentContentActiveIndex + 1]);
+    if (!swipeDirection) {
+      fadeInAnimation(sliderContent[currentContentActiveIndex + 1]);
+    } else {
+      fadeInAnimationSwipe(
+        sliderContent[currentContentActiveIndex + 1],
+        swipeDirection
+      );
+    }
     sliderContent[currentContentActiveIndex + 1].classList.add('active');
   };
 
@@ -118,6 +188,8 @@ const Slider = (function () {
     this.slider = slider;
     this.sliderContent = slider.getElementsByClassName('slider-content-item');
     this.sliderDotsContent = null;
+    this.startX = 0;
+    this.swapDirection = null;
 
     this.previousButton = slider.getElementsByClassName(
       'slider-previous-button'
@@ -157,6 +229,44 @@ const Slider = (function () {
     this.nextButton.addEventListener('click', () => {
       clearInterval(slideShow);
       showNextSlide(this.sliderContent, this.sliderDotsContent);
+    });
+
+    this.slider.addEventListener('touchstart', (e) => {
+      this.startX = e.touches[0].clientX;
+    });
+
+    this.slider.addEventListener('touchmove', (e) => {
+      const currentX = e.touches[0].clientX;
+      const deltaX = currentX - this.startX;
+
+      if (deltaX > 50) {
+        this.swapDirection = 'right';
+      } else if (deltaX < -50) {
+        this.swapDirection = 'left';
+        return false;
+      }
+    });
+
+    this.slider.addEventListener('touchend', () => {
+      this.startX = null;
+      clearInterval(slideShow);
+
+      if (this.swapDirection === 'left') {
+        showNextSlide(
+          this.sliderContent,
+          this.sliderDotsContent,
+          this.swapDirection
+        );
+      } else if (this.swapDirection === 'right') {
+        showPreviousSlide(
+          this.sliderContent,
+          this.sliderDotsContent,
+          this.swapDirection
+        );
+      } else {
+        return;
+      }
+      this.swapDirection = null;
     });
   };
 })();

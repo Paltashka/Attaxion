@@ -3,6 +3,34 @@
 var Slider = function () {
   var timeline = gsap.timeline();
 
+  var fadeInAnimationSwipe = function fadeInAnimationSwipe(item, direction) {
+    timeline.fromTo(item, {
+      display: 'none',
+      opacity: 0,
+      x: direction === 'left' ? 50 : -50
+    }, {
+      display: 'flex',
+      opacity: 1,
+      ease: 'ease',
+      duration: 0.3,
+      x: 0
+    });
+  };
+
+  var fadeOutAnimationSwipe = function fadeOutAnimationSwipe(item, direction) {
+    timeline.fromTo(item, {
+      display: 'flex',
+      opacity: 1,
+      x: 0
+    }, {
+      display: 'none',
+      opacity: 0,
+      ease: 'ease',
+      duration: 0.3,
+      x: direction === 'left' ? -50 : 50
+    });
+  };
+
   var fadeInAnimation = function fadeInAnimation(item) {
     timeline.fromTo(item, {
       display: 'none',
@@ -30,7 +58,7 @@ var Slider = function () {
     });
   };
 
-  var showPreviousSlide = function showPreviousSlide(sliderContent, sliderDotsContent) {
+  var showPreviousSlide = function showPreviousSlide(sliderContent, sliderDotsContent, swipeDirection) {
     var currentContentActiveIndex = 0;
     var currentDotIndex = 0;
 
@@ -56,13 +84,25 @@ var Slider = function () {
 
     sliderDotsContent[currentDotIndex].classList.remove('active');
     sliderDotsContent[currentDotIndex - 1].classList.add('active');
-    fadeOutAnimation(sliderContent[currentContentActiveIndex]);
+
+    if (!swipeDirection) {
+      fadeOutAnimation(sliderContent[currentContentActiveIndex]);
+    } else {
+      fadeOutAnimationSwipe(sliderContent[currentContentActiveIndex], swipeDirection);
+    }
+
     sliderContent[currentContentActiveIndex].classList.remove('active');
-    fadeInAnimation(sliderContent[currentContentActiveIndex - 1]);
+
+    if (!swipeDirection) {
+      fadeInAnimation(sliderContent[currentContentActiveIndex - 1]);
+    } else {
+      fadeInAnimationSwipe(sliderContent[currentContentActiveIndex - 1], swipeDirection);
+    }
+
     sliderContent[currentContentActiveIndex - 1].classList.add('active');
   };
 
-  var showNextSlide = function showNextSlide(sliderContent, sliderDotsContent) {
+  var showNextSlide = function showNextSlide(sliderContent, sliderDotsContent, swipeDirection) {
     var currentContentActiveIndex = 0;
     var currentDotIndex = 0;
 
@@ -88,9 +128,21 @@ var Slider = function () {
 
     sliderDotsContent[currentDotIndex].classList.remove('active');
     sliderDotsContent[currentDotIndex + 1].classList.add('active');
-    fadeOutAnimation(sliderContent[currentContentActiveIndex]);
+
+    if (!swipeDirection) {
+      fadeOutAnimation(sliderContent[currentContentActiveIndex]);
+    } else {
+      fadeOutAnimationSwipe(sliderContent[currentContentActiveIndex], swipeDirection);
+    }
+
     sliderContent[currentContentActiveIndex].classList.remove('active');
-    fadeInAnimation(sliderContent[currentContentActiveIndex + 1]);
+
+    if (!swipeDirection) {
+      fadeInAnimation(sliderContent[currentContentActiveIndex + 1]);
+    } else {
+      fadeInAnimationSwipe(sliderContent[currentContentActiveIndex + 1], swipeDirection);
+    }
+
     sliderContent[currentContentActiveIndex + 1].classList.add('active');
   };
 
@@ -117,6 +169,8 @@ var Slider = function () {
     this.slider = slider;
     this.sliderContent = slider.getElementsByClassName('slider-content-item');
     this.sliderDotsContent = null;
+    this.startX = 0;
+    this.swapDirection = null;
     this.previousButton = slider.getElementsByClassName('slider-previous-button')[0];
     this.nextButton = slider.getElementsByClassName('slider-next-button')[0];
 
@@ -163,6 +217,34 @@ var Slider = function () {
     this.nextButton.addEventListener('click', function () {
       clearInterval(slideShow);
       showNextSlide(_this.sliderContent, _this.sliderDotsContent);
+    });
+    this.slider.addEventListener('touchstart', function (e) {
+      _this.startX = e.touches[0].clientX;
+    });
+    this.slider.addEventListener('touchmove', function (e) {
+      var currentX = e.touches[0].clientX;
+      var deltaX = currentX - _this.startX;
+
+      if (deltaX > 50) {
+        _this.swapDirection = 'right';
+      } else if (deltaX < -50) {
+        _this.swapDirection = 'left';
+        return false;
+      }
+    });
+    this.slider.addEventListener('touchend', function () {
+      _this.startX = null;
+      clearInterval(slideShow);
+
+      if (_this.swapDirection === 'left') {
+        showNextSlide(_this.sliderContent, _this.sliderDotsContent, _this.swapDirection);
+      } else if (_this.swapDirection === 'right') {
+        showPreviousSlide(_this.sliderContent, _this.sliderDotsContent, _this.swapDirection);
+      } else {
+        return;
+      }
+
+      _this.swapDirection = null;
     });
   };
 }();
