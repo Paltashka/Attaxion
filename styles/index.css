@@ -97,3 +97,37 @@ h6 {
 a {
   text-decoration: none;
 }
+
+@media (width <= 768px) {
+  html {
+    font-size: calc(100vw / 360);
+  }
+
+  h1 {
+    font: var(--font-h1-mob);
+  }
+
+  h2 {
+    font: var(--font-h2-mob);
+  }
+  h3 {
+    font: var(--font-h3-mob);
+  }
+  h4 {
+    font: var(--font-h4-mob);
+  }
+  h5 {
+    font: var(--font-h5-mob);
+  }
+  h6 {
+    font: var(--font-h6-mob);
+  }
+
+  section {
+    font: var(--font-s-400-mob);
+    padding: 86rem 24rem 56rem;
+  }
+  header {
+    display: none;
+  }
+}

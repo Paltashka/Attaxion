@@ -126,10 +126,7 @@ const Slider = (function () {
 
     const renderDots = // Render dots
       ((slider) => {
-        const sliderDots = slider
-          .getElementsByClassName('left')[0]
-          .getElementsByClassName('dots')[0];
-
+        const sliderDots = slider.getElementsByClassName('dots')[0];
         for (let index = 0; index < this.sliderContent.length; index++) {
           if (index === 0) {
             sliderDots.innerHTML += '<div class="slider-dots active"></div>';

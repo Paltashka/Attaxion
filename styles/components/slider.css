@@ -1,63 +1,69 @@
 .slider{
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   width: 100%;
   min-height: 392rem;
+  display: grid;
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  grid-template-areas: 
+    "title slider-content slider-content"
+    "dots slider-content slider-content"; 
 }
 
-.slider .left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 
-.slider .left .title {
+.slider .title {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 10rem;
   color: var(--deep-blue);
   font: var(--font-regular-500);
+  grid-area: title;
 }
 
-.slider .left .dots {
+.slider .dots {
   display: flex;
+  align-items: end;
   gap: 14rem;
+  grid-area: dots; 
 }
 
-.slider .left .dots div{
+.slider .dots div{
   width: 8rem;
   height: 8rem;
   background-color:#9688b1;
   border-radius: 100%;
 }
 
-.slider .left .dots div.active{
+.slider .dots div.active{
   background-color: #7878ff;
 }
 
-.slider .left .title .icon{ 
+.slider .title .icon{ 
   height: 24rem;
   width: 24rem;
 }
 
-.slider .right{
-  width: 66%;
+.slider .slider-content{
   position: relative;
+  grid-area: slider-content;
+  width: 100%;
 }
 
-.slider .right .slider-content-item{
+.slider .slider-content .slider-content-item{
   display: none;
   flex-direction: column;
   gap: 48rem;
 }
 
-.slider .right .slider-content-item.active{ 
+.slider .slider-content .slider-content-item.active{ 
   display: flex;
 }
 
-.slider .right .slider-content-item.active .top, .slider .right .slider-content-item.active .author{  animation: contentAnimation 1s ease;} 
+.slider .slider-content .slider-content-item.active .top, .slider .slider-content .slider-content-item.active .author{  animation: contentAnimation 1s ease;} 
 
-.slider .right::before{
+.slider .slider-content::before{
   content: url('');
   background-image: url('../../assets/icons/double-quotes.svg');
   background-repeat: no-repeat;
@@ -70,28 +76,28 @@
   display: block;
 }
 
-.slider .right .top {
+.slider .slider-content .top {
   color: #251B59;
   padding-bottom: 48rem;
   min-height: 300rem;
   border-bottom: 1px solid #B5AEC1;
 }
 
-.slider .right .bottom{
+.slider .slider-content .bottom{
   display: flex;
   justify-content: space-between;
   align-items: center;
   font: var(--font-regular-400-lato);
 }
 
-.slider .right .bottom .author{
+.slider .slider-content .bottom .author{
   display: flex;
   align-items: center;
   gap: 16rem;
   color: var(--deep-blue);
 }
 
-.slider .right .bottom .author::before{
+.slider .slider-content .bottom .author::before{
   content: '';
   display: block;
   width: 24rem;
@@ -99,25 +105,79 @@
   background-color:#251B59;
 }
 
-.slider .right .controls{
+.slider .slider-content .controls{
   display: flex;
   position: absolute;
   right: 0;
-  bottom: 3rem;
+  bottom: 20rem;
   align-items: center;
   gap: 40rem;
 }
 
-.slider .right .controls button svg{
+.slider .slider-content .controls button svg{
   width: 25rem;
   height: 8rem;
   transition: .2s ease;
   fill: #251B59;
 }
 
-.slider .right .controls button:hover svg {
+.slider .slider-content .controls button:hover svg {
   fill: var(--red);
 }
-.slider .right .controls button:first-child svg{
+.slider .slider-content .controls button:first-child svg{
   transform: rotateZ(180deg);
+}
+
+@media (width <= 768px) {
+  .slider {
+    grid-auto-columns: auto ; 
+    grid-template-columns: auto; 
+    grid-template-rows: auto; 
+    gap: 0px 0px; 
+    padding: 0;
+    min-height: 460rem;
+    grid-template-areas: 
+      "title"
+      "slider-content"
+      "slider-content"
+      "dots"; 
+  }
+
+  .slider .slider-content {
+    margin-top: 40rem;
+    padding: 0;
+    margin-bottom: 48rem;
+  }
+
+  .slider .slider-content .slider-content-item{
+    gap: 24rem;
+    padding-left: 10rem;
+  }
+
+  .slider .slider-content::before{
+    width: 24rem;
+    height: 24rem;
+    right: calc(100% - 5rem);
+  }
+
+  .slider .slider-content .slider-content-item .top{
+    padding-bottom: 24rem;
+  }
+
+  .slider .slider-content .bottom{
+    font: var(--font-regular-400-lato-mob);
+  }
+
+  .slider .slider-content .controls{
+    display: none;
+  }
+
+  .slider .title{
+    align-items: center;
+    font: var(--font-regular-500-mob);
+  }
+
+  .slider .dots {
+    justify-content: center;
+  }
 }

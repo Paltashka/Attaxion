@@ -122,7 +122,7 @@ var Slider = function () {
 
     var renderDots = // Render dots
     function (slider) {
-      var sliderDots = slider.getElementsByClassName('left')[0].getElementsByClassName('dots')[0];
+      var sliderDots = slider.getElementsByClassName('dots')[0];
 
       for (var index = 0; index < _this.sliderContent.length; index++) {
         if (index === 0) {
