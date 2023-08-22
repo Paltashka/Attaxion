@@ -174,8 +174,7 @@ var Slider = function () {
     this.previousButton = slider.getElementsByClassName('slider-previous-button')[0];
     this.nextButton = slider.getElementsByClassName('slider-next-button')[0];
 
-    var renderDots = // Render dots
-    function (slider) {
+    var renderDots = function (slider) {
       var sliderDots = slider.getElementsByClassName('dots')[0];
 
       for (var index = 0; index < _this.sliderContent.length; index++) {

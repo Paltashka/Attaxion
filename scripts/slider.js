@@ -196,18 +196,17 @@ const Slider = (function () {
     )[0];
     this.nextButton = slider.getElementsByClassName('slider-next-button')[0];
 
-    const renderDots = // Render dots
-      ((slider) => {
-        const sliderDots = slider.getElementsByClassName('dots')[0];
-        for (let index = 0; index < this.sliderContent.length; index++) {
-          if (index === 0) {
-            sliderDots.innerHTML += '<div class="slider-dots active"></div>';
-            continue;
-          }
-
-          sliderDots.innerHTML += '<div class="slider-dots"></div>';
+    const renderDots = ((slider) => {
+      const sliderDots = slider.getElementsByClassName('dots')[0];
+      for (let index = 0; index < this.sliderContent.length; index++) {
+        if (index === 0) {
+          sliderDots.innerHTML += '<div class="slider-dots active"></div>';
+          continue;
         }
-      })(this.slider);
+
+        sliderDots.innerHTML += '<div class="slider-dots"></div>';
+      }
+    })(this.slider);
 
     this.sliderDotsContent = slider.getElementsByClassName('slider-dots');
 

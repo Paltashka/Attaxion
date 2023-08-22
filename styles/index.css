@@ -127,7 +127,4 @@ a {
     font: var(--font-s-400-mob);
     padding: 86rem 24rem 56rem;
   }
-  header {
-    display: none;
-  }
 }
