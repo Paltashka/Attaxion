@@ -814,8 +814,13 @@
 
   #homepage-s2 .tab-menu{
     padding: 41rem;
-    gap: 41rem;
-    flex-wrap: wrap;
+    gap: 40rem;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+  }
+
+  #homepage-s2 .tab-menu::-webkit-scrollbar {
+    display: none;
   }
 
   #homepage-s2 .content-block {
