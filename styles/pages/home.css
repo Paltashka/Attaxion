@@ -741,8 +741,13 @@
 
 @media (width <= 768px) {
   #homepage-s1 {
-    padding: 112rem 24rem 56rem;
+    padding: 134rem 24rem 56rem;
     gap: 56rem;
+    background: linear-gradient(180deg, #0A0118 0%, rgb(14, 4, 45) 24.22%, rgb(14, 4, 45) 73.85%, #0A0118 100%);
+  }
+
+  #homepage-s1 .section-background {
+    display: none;
   }
 
   #homepage-s1 .title-block {

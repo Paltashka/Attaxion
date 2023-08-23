@@ -1,5 +1,6 @@
 window.onload = () => {
   document.body.className = '';
+  document.getElementById('menu-toggle-check').removeAttribute('checked');
 };
 
 const fadeInAnimation = (timeline, item) => {

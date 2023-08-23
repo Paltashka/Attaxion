@@ -2,6 +2,7 @@
 
 window.onload = function () {
   document.body.className = '';
+  document.getElementById('menu-toggle-check').removeAttribute('checked');
 };
 
 var fadeInAnimation = function fadeInAnimation(timeline, item) {
