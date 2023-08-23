@@ -1,6 +1,4 @@
 .slider{
-  /* display: flex;
-  justify-content: space-between; */
   width: 100%;
   min-height: 392rem;
   display: grid;
@@ -15,9 +13,10 @@
 
 .slider .title {
   display: flex;
-  align-items: start;
+  height: fit-content;
+  align-items: center;
   gap: 10rem;
-  color: var(--deep-blue);
+  color: #251B59;
   font: var(--font-regular-500);
   grid-area: title;
 }
