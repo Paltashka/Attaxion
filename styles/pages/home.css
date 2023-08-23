@@ -725,12 +725,21 @@
 }
 
 #homepage-s8 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   z-index: 1;
   padding-top: 120rem;
 }
 
 #homepage-s8 h3{
+  align-self: flex-start;
   color: #251B59;
+}
+
+#homepage-s8 .button{
+  margin-top: 56rem;
+  min-width: 230rem;
 }
 
 #homepage-s8 .resources-list{
@@ -919,5 +928,10 @@
   #homepage-s8 .resources-list{ 
     flex-direction: column;
     margin-top: 40rem;
+  }
+
+  #homepage-s8 .button{
+    margin-top: 40rem;
+    min-width: 100%;
   }
 }
