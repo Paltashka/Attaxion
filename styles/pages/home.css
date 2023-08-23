@@ -857,6 +857,10 @@
     padding-right: 8rem;
   }
 
+  #homepage-s4 .section-background{
+    display: none;
+  }
+
   #homepage-s4 .card{
     padding: 0 16rem;
     text-align: center;
