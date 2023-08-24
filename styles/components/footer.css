@@ -156,15 +156,19 @@ footer .grid-item {
 }
 
 .footer-bottom {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: 1;
-  place-items: center;
-  gap: 64rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
   grid-area: footer-bottom;
   font: var(--font-tiny-400);
   padding: 0 64rem;
   border-top: 1rem solid #716785;
+}
+
+.footer-bottom .info {
+  display: flex;
+  align-items: center;
+  gap: 64rem;
 }
 
 .footer-bottom li,
@@ -174,17 +178,20 @@ footer .grid-item {
   transition: 0.2s ease;
 }
 
-.footer-bottom .attaxion {
-  grid-column: 1 / -12;
-}
-
 .footer-bottom a:hover {
   color: var(--red);
 }
 
+.footer-bottom .attaxion {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .footer-bottom .socials {
   display: flex;
-  grid-column: 12 / 12;
+  justify-content: flex-end;
+  grid-column: 4/4;
+  align-items: center;
   gap: 16rem;
 }
 
@@ -232,39 +239,28 @@ footer .grid-item {
 
   .footer-bottom {
     flex-direction: column;
+    gap: 32rem;
+  }
+
+  .footer-bottom .info {
+    justify-content: space-between;
+  }
+
+  .footer-bottom .info .attaxion {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 13rem;
+  }
+
+  .footer-bottom .socials {
+    justify-content: center;
+    align-items: center;
+    gap: 32rem;
   }
 
   .footer-info1 .button-cta-gradient-outlined {
     width: 100%;
-  }
-
-  .footer-bottom {
-    padding: 0;
-    padding-top: 48rem;
-    padding-bottom: 13rem;
-    grid-template-columns: 1fr 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      'terms privacy-policy'
-      'socials socials'
-      'attaxion attaxion';
-  }
-
-  .footer-bottom .socials {
-    grid-column: auto;
-    grid-area: socials;
-    margin-top: 32rem;
-    margin-bottom: 16rem;
-  }
-  .footer-bottom .attaxion {
-    grid-column: auto;
-    grid-area: attaxion;
-  }
-  .footer-bottom .terms {
-    grid-area: terms;
-  }
-  .footer-bottom .privacy-policy {
-    grid-area: privacy-policy;
   }
 
   .footer-list {
